@@ -1,0 +1,152 @@
+/* ==========================================================================
+   ARENA — SPORTS TICKETING PLATFORM
+   THEME & DESIGN SYSTEM TOKENS
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Fonts */
+  --font-heading: 'Barlow Condensed', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Global Brand Accents (Consistent across themes) */
+  --color-primary: #0052FF;
+  --color-primary-rgb: 0, 82, 255;
+  --color-primary-hover: #1A6CFF;
+  --color-primary-active: #0041CC;
+  --color-primary-light: rgba(0, 82, 255, 0.12);
+  --color-primary-glow: rgba(0, 82, 255, 0.4);
+
+  --color-accent: #FF5A1F;
+  --color-accent-rgb: 255, 90, 31;
+  --color-accent-hover: #E04810;
+  --color-accent-light: rgba(255, 90, 31, 0.12);
+  --color-accent-glow: rgba(255, 90, 31, 0.35);
+
+  --color-success: #10B981;
+  --color-success-light: rgba(16, 185, 129, 0.15);
+  --color-warning: #F59E0B;
+  --color-warning-light: rgba(245, 158, 11, 0.15);
+  --color-danger: #EF4444;
+  --color-danger-light: rgba(239, 68, 68, 0.15);
+  --color-vip: #F59E0B;
+  --color-vip-glow: rgba(245, 158, 11, 0.35);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   DARK THEME (Default)
+   Deep Midnight Navy + Stadium Black + Electric Cobalt
+   -------------------------------------------------------------------------- */
+[data-theme="dark"],
+:root:not([data-theme="light"]) {
+  color-scheme: dark;
+
+  --bg-body: #050811;
+  --bg-surface-0: #080D1A;
+  --bg-surface-1: #0D1527;
+  --bg-surface-2: #141F38;
+  --bg-surface-3: #1B2948;
+  --bg-glass: rgba(13, 21, 39, 0.78);
+  --bg-glass-strong: rgba(8, 13, 26, 0.92);
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-inverse: #050811;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-bright: rgba(0, 82, 255, 0.5);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.65);
+  --shadow-glow: 0 0 30px rgba(0, 82, 255, 0.25);
+
+  --turf-color: #047857;
+  --turf-glow: rgba(4, 120, 87, 0.2);
+
+  /* Stadium Seating Map States */
+  --seat-avail-bg: #1B2948;
+  --seat-avail-border: #334E7D;
+  --seat-avail-text: #E2E8F0;
+  --seat-selected-bg: #0052FF;
+  --seat-selected-border: #60A5FA;
+  --seat-selected-text: #FFFFFF;
+  --seat-sold-bg: #111827;
+  --seat-sold-border: #1F2937;
+  --seat-sold-text: #4B5563;
+  --seat-vip-bg: #78350F;
+  --seat-vip-border: #F59E0B;
+  --seat-vip-text: #FEF3C7;
+
+  /* Card Gradients */
+  --gradient-overlay: linear-gradient(180deg, rgba(5, 8, 17, 0.1) 0%, rgba(5, 8, 17, 0.88) 75%, #050811 100%);
+  --gradient-hero: linear-gradient(180deg, rgba(5, 8, 17, 0.5) 0%, rgba(5, 8, 17, 0.85) 65%, #050811 100%);
+  --gradient-accent: linear-gradient(135deg, #0052FF 0%, #1A6CFF 100%);
+}
+
+/* --------------------------------------------------------------------------
+   LIGHT THEME
+   Clean White + Cool Gray + Deep Navy + Cobalt Blue
+   -------------------------------------------------------------------------- */
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg-body: #F4F6FB;
+  --bg-surface-0: #FFFFFF;
+  --bg-surface-1: #FFFFFF;
+  --bg-surface-2: #EDF2F9;
+  --bg-surface-3: #E1E8F4;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  --bg-glass-strong: rgba(255, 255, 255, 0.96);
+
+  --text-primary: #0A1128;
+  --text-secondary: #475569;
+  --text-muted: #8492A6;
+  --text-inverse: #FFFFFF;
+
+  --border-subtle: rgba(10, 17, 40, 0.08);
+  --border-medium: rgba(10, 17, 40, 0.16);
+  --border-bright: rgba(0, 82, 255, 0.6);
+
+  --shadow-sm: 0 2px 6px rgba(10, 17, 40, 0.06);
+  --shadow-md: 0 8px 20px rgba(10, 17, 40, 0.08);
+  --shadow-lg: 0 16px 36px rgba(10, 17, 40, 0.12);
+  --shadow-glow: 0 0 24px rgba(0, 82, 255, 0.15);
+
+  --turf-color: #059669;
+  --turf-glow: rgba(5, 150, 105, 0.15);
+
+  /* Stadium Seating Map States */
+  --seat-avail-bg: #E2E8F0;
+  --seat-avail-border: #CBD5E1;
+  --seat-avail-text: #0F172A;
+  --seat-selected-bg: #0052FF;
+  --seat-selected-border: #0041CC;
+  --seat-selected-text: #FFFFFF;
+  --seat-sold-bg: #F1F5F9;
+  --seat-sold-border: #E2E8F0;
+  --seat-sold-text: #94A3B8;
+  --seat-vip-bg: #FEF3C7;
+  --seat-vip-border: #D97706;
+  --seat-vip-text: #92400E;
+
+  /* Card Gradients */
+  --gradient-overlay: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(244, 246, 251, 0.85) 60%, #F4F6FB 100%);
+  --gradient-hero: linear-gradient(180deg, rgba(10, 17, 40, 0.6) 0%, rgba(10, 17, 40, 0.85) 65%, #0A1128 100%);
+  --gradient-accent: linear-gradient(135deg, #0052FF 0%, #0041CC 100%);
+}

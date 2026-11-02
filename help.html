@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help & Matchday Support Desk | ARENA</title>
+  <meta name="description" content="Find answers to frequently asked questions about ticket booking, stadium turnstile entry, cancellation policies, and contact ARENA matchday support.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- PRIMARY NAVBAR -->
+  <header class="arena-navbar">
+    <div class="container-custom d-flex align-items-center justify-content-between">
+      <a href="index.html" class="navbar-brand-arena" aria-label="ARENA Homepage">
+        <div class="brand-icon"><i class="bi bi-shield-shaded"></i></div>
+        <div>
+          <span class="brand-text">ARENA</span>
+          <span class="brand-tag">FEEL THE GAME</span>
+        </div>
+      </a>
+
+      <nav class="d-none d-lg-flex align-items-center gap-1" aria-label="Main Navigation">
+        <a href="index.html" class="arena-nav-link">Home</a>
+        <a href="events.html" class="arena-nav-link">Sports</a>
+        <a href="events.html" class="arena-nav-link">Fixtures</a>
+        <a href="venue-details.html" class="arena-nav-link">Venues</a>
+        <a href="ticket-details.html" class="arena-nav-link">Ticket Lookup</a>
+        <a href="help.html" class="arena-nav-link active">Help</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn-theme-toggle theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
+        <a href="events.html" class="btn btn-sm btn-primary"><i class="bi bi-ticket-perforated-fill"></i> Find Tickets</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       PAGE HEADER
+       ========================================================================= -->
+  <section class="py-5 bg-surface-1 border-bottom border-subtle">
+    <div class="container-custom text-center">
+      <span class="section-subtitle">Fan Care & Matchday Services</span>
+      <h1 class="display-5 fw-bold mb-2">HOW CAN WE ASSIST YOU?</h1>
+      <p class="text-secondary max-w-600 mx-auto" style="max-width: 620px;">
+        Everything you need to know about purchasing tickets, stadium access, digital mobile passes, and matchday guidelines.
+      </p>
+
+      <div class="col-md-6 col-lg-5 mx-auto mt-4">
+        <div class="input-group">
+          <span class="input-group-text bg-surface-2 border-subtle text-primary"><i class="bi bi-search"></i></span>
+          <input type="text" class="arena-input" id="faqSearchInput" placeholder="Search questions (e.g. refund, gate, wallet, QR code)...">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       HELP TOPIC CARDS
+       ========================================================================= -->
+  <section class="py-5">
+    <div class="container-custom">
+      <div class="row g-4 mb-5">
+        <div class="col-md-3">
+          <div class="p-4 bg-surface-1 border border-subtle rounded-3 text-center h-100">
+            <div class="feature-icon-wrap mx-auto mb-3"><i class="bi bi-ticket-perforated-fill"></i></div>
+            <h5 class="font-heading mb-1">Ticket Booking</h5>
+            <p class="text-secondary small mb-0">Seat allocations, group purchases, and category details.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-4 bg-surface-1 border border-subtle rounded-3 text-center h-100">
+            <div class="feature-icon-wrap mx-auto mb-3"><i class="bi bi-qr-code-scan"></i></div>
+            <h5 class="font-heading mb-1">Digital Fast-Pass</h5>
+            <p class="text-secondary small mb-0">Apple Wallet, Google Wallet, and turnstile barcode scanning.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-4 bg-surface-1 border border-subtle rounded-3 text-center h-100">
+            <div class="feature-icon-wrap mx-auto mb-3"><i class="bi bi-credit-card-2-front-fill"></i></div>
+            <h5 class="font-heading mb-1">Payments & Fees</h5>
+            <p class="text-secondary small mb-0">Transparent pricing, currency conversion, and receipt lookup.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-4 bg-surface-1 border border-subtle rounded-3 text-center h-100">
+            <div class="feature-icon-wrap mx-auto mb-3"><i class="bi bi-arrow-repeat"></i></div>
+            <h5 class="font-heading mb-1">Refunds & Reschedules</h5>
+            <p class="text-secondary small mb-0">Match postponement guarantees and ticket transfer support.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQs & Contact Form Grid -->
+      <div class="row g-5">
+        
+        <!-- Left: Accordion FAQs -->
+        <div class="col-lg-7">
+          <h3 class="font-heading mb-3"><i class="bi bi-question-circle text-primary"></i> Frequently Asked Questions</h3>
+
+          <div class="accordion arena-accordion" id="helpFaqAccordion">
+            
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne">
+                  How and when do I receive my matchday tickets?
+                </button>
+              </h2>
+              <div id="faqOne" class="accordion-collapse collapse show">
+                <div class="accordion-body">
+                  All tickets purchased on ARENA are issued instantly as verified digital passes. You can access your ticket immediately upon completing checkout via the <a href="ticket-details.html">Booking Lookup</a> page, download it as a PDF boarding pass, or add it to Apple and Google Wallet.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo">
+                  Are seats allocated together when booking multiple tickets?
+                </button>
+              </h2>
+              <div id="faqTwo" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Yes, absolutely. Our interactive stadium seating engine allows you to visually select adjacent seats side-by-side in real time. When booking, consecutive seats in the same row are locked together for your group.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree">
+                  What happens if a match is postponed or rescheduled?
+                </button>
+              </h2>
+              <div id="faqThree" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Under the ARENA Matchday Guarantee, your tickets remain 100% valid for the rescheduled fixture date. If you are unable to attend the rescheduled date, you may request a full face-value refund up to 72 hours before the new match start time.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour">
+                  Can I transfer a ticket to a friend or family member?
+                </button>
+              </h2>
+              <div id="faqFour" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  Yes. You can share your booking confirmation pass or download the individual PDF boarding pass and forward it directly to your guest. They will simply present the pass on their phone at the designated turnstile.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFive">
+                  What payment methods are supported on ARENA?
+                </button>
+              </h2>
+              <div id="faqFive" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  We accept all major credit and debit cards (Visa, Mastercard, American Express), Apple Pay, Google Pay, and UPI QR payments with zero hidden transaction surcharges.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="col-lg-5">
+          <div class="p-4 bg-surface-1 border border-subtle rounded-3">
+            <h4 class="font-heading mb-1"><i class="bi bi-envelope text-primary"></i> Contact Matchday Desk</h4>
+            <p class="text-secondary small mb-4">Have an urgent ticket query? Our team is on duty 24/7 during tournament matchdays.</p>
+
+            <form id="helpContactForm" class="d-flex flex-column gap-3" onsubmit="event.preventDefault(); window.ArenaToast ? window.ArenaToast.show('Your message has been dispatched to Matchday Support. Reference ticket #ARN-SUP-772.', 'success') : alert('Message sent'); this.reset();">
+              <div>
+                <label class="search-field-label">Your Name</label>
+                <input type="text" class="arena-input" placeholder="e.g. David Silva" required>
+              </div>
+
+              <div>
+                <label class="search-field-label">Email Address</label>
+                <input type="email" class="arena-input" placeholder="name@domain.com" required>
+              </div>
+
+              <div>
+                <label class="search-field-label">Topic</label>
+                <select class="arena-select" required>
+                  <option value="ticketing">Ticket Booking & Seat Allocation</option>
+                  <option value="turnstile">Turnstile Entry & QR Pass</option>
+                  <option value="refund">Refund / Reschedule Request</option>
+                  <option value="vip">Hospitality & Corporate Suites</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="search-field-label">Booking Reference (Optional)</label>
+                <input type="text" class="arena-input" placeholder="e.g. ARN-84920">
+              </div>
+
+              <div>
+                <label class="search-field-label">Message Details</label>
+                <textarea class="arena-input" rows="4" placeholder="How can our matchday team help you?" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100 py-2">
+                Send Message <i class="bi bi-send-fill"></i>
+              </button>
+            </form>
+
+            <div class="mt-4 pt-3 border-top border-subtle small text-secondary">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <i class="bi bi-envelope-at-fill text-primary"></i> support@arena-tickets.live
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-telephone-fill text-success"></i> +44 20 7946 0192 (Matchday Hotline)
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="arena-footer">
+    <div class="container-custom">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a href="index.html" class="navbar-brand-arena mb-3">
+            <div class="brand-icon"><i class="bi bi-shield-shaded"></i></div>
+            <div>
+              <span class="brand-text">ARENA</span>
+              <span class="brand-tag">FEEL THE GAME</span>
+            </div>
+          </a>
+          <p class="text-secondary small">ARENA is the premier international sports ticketing platform.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Sports</h5>
+          <ul class="footer-links">
+            <li><a href="events.html?sport=Football">Football</a></li>
+            <li><a href="events.html?sport=Cricket">Cricket</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="events.html">Fixtures</a></li>
+            <li><a href="ticket-details.html">Booking Lookup</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="footer-heading">Turnstile Entry</h5>
+          <p class="text-secondary small">Turnstile issues or re-entry queries? Visit the Matchday Ticket Office adjacent to Gate B.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 ARENA Ticketing Technologies Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Instant FAQ filter
+      const searchInput = document.getElementById('faqSearchInput');
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const q = e.target.value.toLowerCase().trim();
+          faqItems.forEach((item) => {
+            const text = item.textContent.toLowerCase();
+            if (!q || text.includes(q)) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

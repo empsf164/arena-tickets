@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sports Fixtures & Event Discovery | ARENA</title>
+  <meta name="description" content="Discover and book authentic tickets for the biggest global sporting events. Filter by sport, competition, venue, date, and price range.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- PRIMARY NAVBAR -->
+  <header class="arena-navbar">
+    <div class="container-custom d-flex align-items-center justify-content-between">
+      <a href="index.html" class="navbar-brand-arena" aria-label="ARENA Homepage">
+        <div class="brand-icon">
+          <i class="bi bi-shield-shaded"></i>
+        </div>
+        <div>
+          <span class="brand-text">ARENA</span>
+          <span class="brand-tag">FEEL THE GAME</span>
+        </div>
+      </a>
+
+      <nav class="d-none d-lg-flex align-items-center gap-1" aria-label="Main Navigation">
+        <a href="index.html" class="arena-nav-link">Home</a>
+        
+        <!-- Sports Dropdown -->
+        <div class="dropdown">
+          <a href="#" class="arena-nav-link active dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sports
+          </a>
+          <ul class="dropdown-menu arena-dropdown-menu">
+            <li><a class="arena-dropdown-item" href="events.html?sport=Football"><i class="bi bi-trophy"></i> Football</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?sport=Cricket"><i class="bi bi-bullseye"></i> Cricket</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?sport=Basketball"><i class="bi bi-dribbble"></i> Basketball</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?sport=Tennis"><i class="bi bi-circle"></i> Tennis</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?sport=Rugby"><i class="bi bi-shield"></i> Rugby</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?sport=Badminton"><i class="bi bi-lightning-charge"></i> Badminton</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?sport=Formula+Racing"><i class="bi bi-speedometer2"></i> Formula Racing</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?sport=Volleyball"><i class="bi bi-activity"></i> Volleyball</a></li>
+            <li><hr class="dropdown-divider border-subtle my-1"></li>
+            <li><a class="arena-dropdown-item fw-bold text-primary" href="events.html"><i class="bi bi-grid-fill"></i> All Sports</a></li>
+          </ul>
+        </div>
+
+        <!-- Fixtures Dropdown -->
+        <div class="dropdown">
+          <a href="#" class="arena-nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Fixtures
+          </a>
+          <ul class="dropdown-menu arena-dropdown-menu">
+            <li><a class="arena-dropdown-item" href="events.html?filter=today"><i class="bi bi-clock-history"></i> Today's Events</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?filter=upcoming"><i class="bi bi-calendar-event"></i> Upcoming Matches</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?filter=thisweek"><i class="bi bi-calendar-week"></i> This Week</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?filter=thismonth"><i class="bi bi-calendar-month"></i> This Month</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?filter=tournaments"><i class="bi bi-award"></i> Major Tournaments</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?filter=popular"><i class="bi bi-fire"></i> Popular Events</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown">
+          <a href="#" class="arena-nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Venues
+          </a>
+          <ul class="dropdown-menu arena-dropdown-menu">
+            <li><a class="arena-dropdown-item" href="venue-details.html?venue=wembley"><i class="bi bi-geo-alt"></i> Featured Stadiums</a></li>
+            <li><a class="arena-dropdown-item" href="venue-details.html?venue=wembley"><i class="bi bi-building"></i> Football Stadiums</a></li>
+            <li><a class="arena-dropdown-item" href="venue-details.html?venue=modi"><i class="bi bi-layers"></i> Cricket Grounds</a></li>
+            <li><a class="arena-dropdown-item" href="venue-details.html?venue=tdgarden"><i class="bi bi-bank"></i> Indoor Arenas</a></li>
+            <li><a class="arena-dropdown-item" href="venue-details.html?venue=monaco"><i class="bi bi-flag"></i> Racing Circuits</a></li>
+          </ul>
+        </div>
+
+        <a href="events.html?offers=true" class="arena-nav-link">Offers</a>
+        <a href="help.html" class="arena-nav-link">Help</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn-nav-search" aria-label="Search events"><i class="bi bi-search"></i></button>
+        <button class="btn-theme-toggle theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
+
+        <div class="navbar-actions-desktop d-none d-lg-flex align-items-center gap-2 ms-2">
+          <a href="login.html" class="btn btn-sm btn-outline-arena">Login</a>
+          <a href="signup.html" class="btn btn-sm btn-outline-arena">Sign Up</a>
+          <a href="events.html" class="btn btn-sm btn-primary">
+            <i class="bi bi-ticket-perforated-fill"></i> Find Tickets
+          </a>
+        </div>
+
+        <button class="navbar-toggler d-lg-none btn-theme-toggle" type="button" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-3"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="navbar-collapse d-lg-none" id="arenaNavbarNav">
+      <button class="mobile-close-btn" aria-label="Close Navigation Drawer"><i class="bi bi-x-lg"></i></button>
+      <div class="d-flex align-items-center gap-2 mb-4">
+        <div class="brand-icon"><i class="bi bi-shield-shaded"></i></div>
+        <span class="brand-text">ARENA</span>
+      </div>
+      <a href="index.html" class="arena-nav-link">Home</a>
+      <a href="events.html" class="arena-nav-link active">Fixtures & Matches</a>
+      <a href="venue-details.html" class="arena-nav-link">Stadiums & Venues</a>
+      <a href="ticket-details.html" class="arena-nav-link">Ticket Lookup</a>
+      <a href="help.html" class="arena-nav-link">Help & FAQs</a>
+      <div class="navbar-actions-mobile">
+        <a href="events.html" class="btn btn-primary w-100 mb-2">Find Tickets</a>
+        <div class="d-flex gap-2">
+          <a href="login.html" class="btn btn-outline-arena flex-grow-1">Login</a>
+          <a href="signup.html" class="btn btn-outline-arena flex-grow-1">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       PAGE HEADER
+       ========================================================================= -->
+  <section class="py-4 bg-surface-1 border-bottom border-subtle">
+    <div class="container-custom">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
+        <div>
+          <span class="section-subtitle">Official Sporting Calendar</span>
+          <h1 class="h2 mb-1">Discover Sports Fixtures</h1>
+          <p class="text-secondary small mb-0">Showing premier matches with live stadium seat allocations.</p>
+        </div>
+        <div>
+          <span class="badge-urgent fs-6 px-3 py-2" id="liveMatchCounterBadge">
+            <i class="bi bi-broadcast"></i> <span id="eventCountNumber">9</span> Matches Available
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MAIN DISCOVERY & FILTERS SECTION
+       ========================================================================= -->
+  <section class="py-5">
+    <div class="container-custom">
+      <div class="row g-4">
+
+        <!-- Filter Sidebar -->
+        <div class="col-lg-3">
+          <div class="p-3 bg-surface-1 border border-subtle rounded-3 sticky-top" style="top: 85px;">
+            <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom border-subtle">
+              <h5 class="mb-0 font-heading"><i class="bi bi-funnel text-primary"></i> Filters</h5>
+              <button type="button" class="btn btn-sm btn-link text-muted p-0 text-decoration-none" id="btnClearFilters">
+                Reset All
+              </button>
+            </div>
+
+            <!-- Search by Keyword -->
+            <div class="mb-3">
+              <label class="search-field-label">Search Event / Team</label>
+              <input type="text" class="arena-input" id="filterKeyword" placeholder="e.g. Alcaraz, Madrid, Final">
+            </div>
+
+            <!-- Sport Category Select -->
+            <div class="mb-3">
+              <label class="search-field-label">Sport Category</label>
+              <select class="arena-select" id="filterSport">
+                <option value="">All Sports</option>
+                <option value="Football">Football</option>
+                <option value="Cricket">Cricket</option>
+                <option value="Basketball">Basketball</option>
+                <option value="Tennis">Tennis</option>
+                <option value="Rugby">Rugby</option>
+                <option value="Badminton">Badminton</option>
+                <option value="Formula Racing">Formula Racing</option>
+                <option value="Volleyball">Volleyball</option>
+              </select>
+            </div>
+
+            <!-- Max Price Slider -->
+            <div class="mb-3">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <label class="search-field-label mb-0">Max Price</label>
+                <span class="font-heading fw-bold text-primary" id="priceDisplayValue">$1,000</span>
+              </div>
+              <input type="range" class="form-range" id="filterPriceRange" min="50" max="1000" step="25" value="1000">
+              <div class="d-flex justify-content-between text-muted" style="font-size: 0.75rem;">
+                <span>$50</span>
+                <span>$500</span>
+                <span>$1000+</span>
+              </div>
+            </div>
+
+            <!-- Ticket Availability -->
+            <div class="mb-3 pt-2 border-top border-subtle">
+              <label class="search-field-label">Availability</label>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" value="sellingFast" id="availSellingFast" checked>
+                <label class="form-check-label text-secondary small" for="availSellingFast">
+                  Selling Fast / High Demand
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="general" id="availGeneral" checked>
+                <label class="form-check-label text-secondary small" for="availGeneral">
+                  General Admission Open
+                </label>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-sm btn-primary w-100" id="btnApplyFilters">
+              Apply Filters
+            </button>
+          </div>
+        </div>
+
+        <!-- Events Grid & List Content -->
+        <div class="col-lg-9">
+
+          <!-- Controls Header: Sort & View Toggle -->
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 p-3 bg-surface-1 border border-subtle rounded-3 mb-4">
+            <div class="d-flex align-items-center gap-2">
+              <label for="sortSelect" class="text-muted small text-nowrap mb-0 fw-bold">SORT BY:</label>
+              <select class="arena-select py-1 px-2" id="sortSelect" style="width: auto;">
+                <option value="popular">Most Popular</option>
+                <option value="upcoming">Upcoming Date</option>
+                <option value="lowest">Lowest Price</option>
+                <option value="highest">Highest Price</option>
+              </select>
+            </div>
+
+            <!-- Grid vs List Toggle -->
+            <div class="d-flex align-items-center gap-1">
+              <span class="text-muted small me-2 d-none d-sm-inline">VIEW:</span>
+              <button type="button" class="btn btn-sm btn-primary" id="btnViewGrid" title="Grid View" aria-label="Grid View">
+                <i class="bi bi-grid-fill"></i>
+              </button>
+              <button type="button" class="btn btn-sm btn-outline-arena" id="btnViewList" title="List View" aria-label="List View">
+                <i class="bi bi-list-ul"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Events Container -->
+          <div id="eventsResultContainer" class="row g-4">
+            <!-- Populated via events.js and custom controller -->
+          </div>
+
+          <!-- Empty State (Hidden by default) -->
+          <div id="eventsEmptyState" class="text-center py-5 d-none bg-surface-1 rounded-3 border border-subtle p-4">
+            <i class="bi bi-emoji-neutral text-muted" style="font-size: 3.5rem;"></i>
+            <h4 class="mt-3">No matching sporting fixtures</h4>
+            <p class="text-secondary max-w-500 mx-auto">
+              We couldn't find any matches matching your exact filter criteria. Try clearing filters or selecting another sport.
+            </p>
+            <button type="button" class="btn btn-primary btn-sm mt-2" id="btnResetEmpty">
+              Reset Filters & View All
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="arena-footer">
+    <div class="container-custom">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a href="index.html" class="navbar-brand-arena mb-3">
+            <div class="brand-icon"><i class="bi bi-shield-shaded"></i></div>
+            <div>
+              <span class="brand-text">ARENA</span>
+              <span class="brand-tag">FEEL THE GAME</span>
+            </div>
+          </a>
+          <p class="text-secondary small">ARENA is the premier international sports ticketing platform. Secure, transparent, and direct stadium ticketing.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Sports</h5>
+          <ul class="footer-links">
+            <li><a href="events.html?sport=Football">Football</a></li>
+            <li><a href="events.html?sport=Cricket">Cricket</a></li>
+            <li><a href="events.html?sport=Basketball">Basketball</a></li>
+            <li><a href="events.html?sport=Tennis">Tennis</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="events.html">All Fixtures</a></li>
+            <li><a href="venue-details.html">Stadiums & Maps</a></li>
+            <li><a href="ticket-details.html">Booking Lookup</a></li>
+            <li><a href="help.html">Help & FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="footer-heading">Priority Alerts</h5>
+          <p class="text-secondary small">Get notifications when tournament finals and derbies go on sale.</p>
+          <div class="d-flex align-items-center gap-2 mt-2 text-muted small">
+            <i class="bi bi-shield-lock-fill text-success"></i> Verified Stadium Partner Passes
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 ARENA Ticketing Technologies Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/events.js"></script>
+  <script src="assets/js/fixtures.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let isListView = false;
+
+      const container = document.getElementById('eventsResultContainer');
+      const emptyState = document.getElementById('eventsEmptyState');
+      const counterBadge = document.getElementById('eventCountNumber');
+      const keywordInput = document.getElementById('filterKeyword');
+      const sportSelect = document.getElementById('filterSport');
+      const priceSlider = document.getElementById('filterPriceRange');
+      const priceDisplay = document.getElementById('priceDisplayValue');
+      const sortSelect = document.getElementById('sortSelect');
+      const btnGrid = document.getElementById('btnViewGrid');
+      const btnList = document.getElementById('btnViewList');
+      const btnClear = document.getElementById('btnClearFilters');
+      const btnResetEmpty = document.getElementById('btnResetEmpty');
+
+      // Check query params
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('sport')) {
+        sportSelect.value = urlParams.get('sport');
+      }
+      if (urlParams.get('query')) {
+        keywordInput.value = urlParams.get('query');
+      }
+
+      function renderCard(event) {
+        if (isListView) {
+          return `
+            <div class="col-12">
+              <div class="arena-card flex-md-row align-items-stretch">
+                <div class="card-media" style="width: 100%; max-width: 280px; min-height: 180px;">
+                  <img src="${event.image}" alt="${event.title}">
+                  <div class="card-media-overlay"></div>
+                  <span class="badge-sport position-absolute top-0 start-0 m-2">${event.sport}</span>
+                </div>
+                <div class="card-body-arena">
+                  <div>
+                    <div class="d-flex justify-content-between mb-1">
+                      <span class="text-primary small fw-bold">${event.competition}</span>
+                      <span class="${event.badgeClass} small">${event.status}</span>
+                    </div>
+                    <h3 class="card-event-title fs-4 mb-1">
+                      <a href="event-details.html?id=${event.id}">${event.title}</a>
+                    </h3>
+                    <div class="card-venue-text small mb-2">
+                      <i class="bi bi-geo-alt-fill text-danger"></i> ${event.venue}, ${event.city} &bull; <i class="bi bi-calendar3"></i> ${event.displayDate}
+                    </div>
+                    <p class="text-secondary small mb-2 d-none d-md-block">${event.description.substring(0, 110)}...</p>
+                  </div>
+                  <div class="card-footer-arena pt-2">
+                    <div>
+                      <span class="price-indicator-label">Tickets from</span>
+                      <span class="price-indicator-val text-primary">$${event.priceFrom}</span>
+                    </div>
+                    <div class="d-flex gap-2">
+                      <a href="event-details.html?id=${event.id}" class="btn btn-sm btn-outline-arena">Details</a>
+                      <a href="booking.html?id=${event.id}" class="btn btn-sm btn-primary">Book Tickets</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        // Grid View
+        return `
+          <div class="col-md-6 col-lg-4">
+            <div class="arena-card">
+              <div class="card-media">
+                <img src="${event.image}" alt="${event.title}">
+                <div class="card-media-overlay"></div>
+                <div class="card-badges-top">
+                  <span class="badge-sport">${event.sport}</span>
+                  <span class="${event.badgeClass} small">${event.status}</span>
+                </div>
+              </div>
+              <div class="card-body-arena">
+                <div>
+                  <div class="card-meta-row">
+                    <span><i class="bi bi-award"></i> ${event.competition.split('—')[0]}</span>
+                  </div>
+                  <h4 class="card-event-title">
+                    <a href="event-details.html?id=${event.id}">${event.title}</a>
+                  </h4>
+                  <div class="card-venue-text">
+                    <i class="bi bi-geo-alt"></i> ${event.venue}, ${event.city.split(',')[0]}
+                  </div>
+                  <div class="text-muted small mb-3">
+                    <i class="bi bi-calendar3"></i> ${event.displayDate.split(',')[1] || event.displayDate} &bull; ${event.time}
+                  </div>
+                </div>
+                <div class="card-footer-arena">
+                  <div>
+                    <span class="price-indicator-label">From</span>
+                    <span class="price-indicator-val text-primary">$${event.priceFrom}</span>
+                  </div>
+                  <a href="booking.html?id=${event.id}" class="btn btn-sm btn-primary">
+                    <i class="bi bi-ticket-perforated-fill"></i> Book
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      function filterAndRender() {
+        const query = keywordInput.value;
+        const sport = sportSelect.value;
+        const maxPrice = parseFloat(priceSlider.value);
+        const sort = sortSelect.value;
+
+        const results = window.ArenaEventsHelper.search({ query, sport, maxPrice, sort });
+
+        if (counterBadge) counterBadge.textContent = results.length;
+
+        if (results.length === 0) {
+          container.innerHTML = '';
+          emptyState.classList.remove('d-none');
+        } else {
+          emptyState.classList.add('d-none');
+          container.innerHTML = results.map(renderCard).join('');
+        }
+      }
+
+      // Event listeners
+      keywordInput.addEventListener('input', filterAndRender);
+      sportSelect.addEventListener('change', filterAndRender);
+      sortSelect.addEventListener('change', filterAndRender);
+      priceSlider.addEventListener('input', (e) => {
+        priceDisplay.textContent = `$${e.target.value}`;
+        filterAndRender();
+      });
+
+      // View toggle
+      btnGrid.addEventListener('click', () => {
+        isListView = false;
+        btnGrid.className = 'btn btn-sm btn-primary';
+        btnList.className = 'btn btn-sm btn-outline-arena';
+        filterAndRender();
+      });
+
+      btnList.addEventListener('click', () => {
+        isListView = true;
+        btnList.className = 'btn btn-sm btn-primary';
+        btnGrid.className = 'btn btn-sm btn-outline-arena';
+        filterAndRender();
+      });
+
+      function resetAll() {
+        keywordInput.value = '';
+        sportSelect.value = '';
+        priceSlider.value = 1000;
+        priceDisplay.textContent = '$1,000';
+        sortSelect.value = 'popular';
+        filterAndRender();
+      }
+
+      btnClear.addEventListener('click', resetAll);
+      btnResetEmpty.addEventListener('click', resetAll);
+
+      // Initial run
+      filterAndRender();
+    });
+  </script>
+</body>
+</html>

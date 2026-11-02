@@ -1,0 +1,275 @@
+/* ==========================================================================
+   ARENA — SPORTS TICKETING PLATFORM
+   RESPONSIVE & PRINT STYLES (responsive.css)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   01. MOBILE NAVIGATION & DRAWER
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-surface-0);
+    padding: 5rem 1.75rem 2rem;
+    overflow-y: auto;
+    z-index: 1050;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .navbar-collapse.show {
+    display: flex !important;
+  }
+
+  body.menu-open {
+    overflow: hidden !important;
+  }
+
+  .mobile-close-btn {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border-medium);
+    color: var(--text-primary);
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  .arena-nav-link {
+    font-size: 1.35rem !important;
+    padding: 0.75rem 0 !important;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .arena-nav-link::after {
+    display: none !important;
+  }
+
+  .arena-dropdown-menu {
+    background-color: var(--bg-surface-2);
+    border: none;
+    box-shadow: none;
+    padding: 0.5rem 0 0.5rem 1rem;
+    margin-top: 0.25rem;
+  }
+
+  .navbar-actions-mobile {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    width: 100%;
+  }
+
+  .navbar-actions-desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .mobile-close-btn {
+    display: none !important;
+  }
+  .navbar-actions-mobile {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   02. TABLET & MOBILE LAYOUT ADJUSTMENTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  .hero-section {
+    padding: 3.5rem 0 2.5rem;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .event-search-panel {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Fixtures on Mobile */
+  .fixture-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.2rem;
+  }
+
+  .fixture-teams {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .team-item {
+    font-size: 1.1rem;
+    width: 42%;
+  }
+
+  .fixture-action {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .fixture-action .btn {
+    width: 100%;
+  }
+
+  /* Digital Ticket on Mobile */
+  .digital-ticket-pass {
+    flex-direction: column;
+  }
+
+  .ticket-main {
+    border-right: none;
+    border-bottom: 2px dashed var(--border-medium);
+    padding: 1.5rem;
+  }
+
+  .ticket-notch-top,
+  .ticket-notch-bottom {
+    top: auto;
+    bottom: -16px;
+  }
+
+  .ticket-notch-top {
+    left: -16px;
+    right: auto;
+  }
+
+  .ticket-notch-bottom {
+    right: -16px;
+  }
+
+  .ticket-stub {
+    width: 100%;
+    padding: 1.75rem 1.5rem;
+  }
+
+  /* Stepper on Mobile */
+  .booking-stepper {
+    padding: 0;
+  }
+  .step-label {
+    display: none;
+  }
+  .step-circle {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+
+  /* Seat Grid scrolling */
+  .seat-grid-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .seat-node {
+    width: 24px;
+    height: 24px;
+    font-size: 0.65rem;
+  }
+
+  .seat-row {
+    gap: 0.25rem;
+    margin-bottom: 0.35rem;
+  }
+}
+
+/* Small mobile devices (e.g. 320px - 360px) */
+@media (max-width: 375px) {
+  .container-custom {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .hero-title {
+    font-size: 2.15rem;
+  }
+
+  .team-item {
+    font-size: 0.95rem;
+  }
+
+  .team-crest {
+    width: 28px;
+    height: 28px;
+  }
+
+  .btn-lg {
+    padding: 0.85rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   03. PRINT STYLESHEET FOR MATCH TICKETS
+   -------------------------------------------------------------------------- */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  .arena-navbar,
+  .arena-footer,
+  .no-print,
+  .btn,
+  .toast-container-arena,
+  .theme-toggle {
+    display: none !important;
+  }
+
+  .digital-ticket-container {
+    filter: none !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .digital-ticket-pass {
+    border: 2px solid #000000 !important;
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  .ticket-main,
+  .ticket-stub {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  .ticket-notch-top,
+  .ticket-notch-bottom {
+    display: none !important;
+  }
+
+  .qr-placeholder-wrap {
+    border: 1px solid #000000 !important;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, span {
+    color: #000000 !important;
+  }
+}

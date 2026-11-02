@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARENA — Feel the Game. Be There. | Premium Sports Ticketing Platform</title>
+  <meta name="description" content="Discover major sporting fixtures, secure verified stadium seats, and experience every moment live with ARENA. Football, Cricket, Basketball, F1 and Grand Slam tickets.">
+  <meta name="keywords" content="sports tickets, stadium seating, football tickets, champions league, cricket world cup, formula 1, wimbledon, arena tickets">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ARENA — Feel the Game. Be There.">
+  <meta property="og:description" content="Premium international sports event discovery and interactive stadium seat booking platform.">
+  <meta property="og:type" content="website">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       PRIMARY NAVBAR
+       ========================================================================= -->
+  <header class="arena-navbar">
+    <div class="container-custom d-flex align-items-center justify-content-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="navbar-brand-arena" aria-label="ARENA Homepage">
+        <div class="brand-icon">
+          <i class="bi bi-shield-shaded"></i>
+        </div>
+        <div>
+          <span class="brand-text">ARENA</span>
+          <span class="brand-tag">FEEL THE GAME</span>
+        </div>
+      </a>
+
+      <!-- Desktop Main Navigation -->
+      <nav class="d-none d-lg-flex align-items-center gap-1" aria-label="Main Navigation">
+        <a href="index.html" class="arena-nav-link active">Home</a>
+
+        <!-- Sports Dropdown -->
+        <div class="dropdown">
+          <a href="#" class="arena-nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sports
+          </a>
+          <ul class="dropdown-menu arena-dropdown-menu">
+            <li><a class="arena-dropdown-item" href="events.html?sport=Football"><i class="bi bi-trophy"></i> Football</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?sport=Cricket"><i class="bi bi-bullseye"></i> Cricket</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?sport=Basketball"><i class="bi bi-dribbble"></i> Basketball</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?sport=Tennis"><i class="bi bi-circle"></i> Tennis</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?sport=Rugby"><i class="bi bi-shield"></i> Rugby</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?sport=Badminton"><i class="bi bi-lightning-charge"></i> Badminton</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?sport=Formula+Racing"><i class="bi bi-speedometer2"></i> Formula Racing</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?sport=Volleyball"><i class="bi bi-activity"></i> Volleyball</a></li>
+            <li><hr class="dropdown-divider border-subtle my-1"></li>
+            <li><a class="arena-dropdown-item fw-bold text-primary" href="events.html"><i class="bi bi-grid-fill"></i> All Sports</a></li>
+          </ul>
+        </div>
+
+        <!-- Fixtures Dropdown -->
+        <div class="dropdown">
+          <a href="#" class="arena-nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Fixtures
+          </a>
+          <ul class="dropdown-menu arena-dropdown-menu">
+            <li><a class="arena-dropdown-item" href="events.html?filter=today"><i class="bi bi-clock-history"></i> Today's Events</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?filter=upcoming"><i class="bi bi-calendar-event"></i> Upcoming Matches</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?filter=thisweek"><i class="bi bi-calendar-week"></i> This Week</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?filter=thismonth"><i class="bi bi-calendar-month"></i> This Month</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?filter=tournaments"><i class="bi bi-award"></i> Major Tournaments</a></li>
+            <li><a class="arena-dropdown-item" href="events.html?filter=popular"><i class="bi bi-fire"></i> Popular Events</a></li>
+          </ul>
+        </div>
+
+        <!-- Venues Dropdown -->
+        <div class="dropdown">
+          <a href="#" class="arena-nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Venues
+          </a>
+          <ul class="dropdown-menu arena-dropdown-menu">
+            <li><a class="arena-dropdown-item" href="venue-details.html?venue=wembley"><i class="bi bi-geo-alt"></i> Featured Stadiums</a></li>
+            <li><a class="arena-dropdown-item" href="venue-details.html?venue=wembley"><i class="bi bi-building"></i> Football Stadiums</a></li>
+            <li><a class="arena-dropdown-item" href="venue-details.html?venue=modi"><i class="bi bi-layers"></i> Cricket Grounds</a></li>
+            <li><a class="arena-dropdown-item" href="venue-details.html?venue=tdgarden"><i class="bi bi-bank"></i> Indoor Arenas</a></li>
+            <li><a class="arena-dropdown-item" href="venue-details.html?venue=monaco"><i class="bi bi-flag"></i> Racing Circuits</a></li>
+            <li><hr class="dropdown-divider border-subtle my-1"></li>
+            <li><a class="arena-dropdown-item fw-bold text-primary" href="venue-details.html"><i class="bi bi-map"></i> All Venues</a></li>
+          </ul>
+        </div>
+
+        <a href="events.html?offers=true" class="arena-nav-link">Offers</a>
+        <a href="help.html" class="arena-nav-link">Help</a>
+      </nav>
+
+      <!-- Right Actions (Search, Theme, Auth, CTA) -->
+      <div class="d-flex align-items-center gap-2">
+        <!-- Quick Search -->
+        <button class="btn-nav-search" aria-label="Search events" title="Search sporting fixtures">
+          <i class="bi bi-search"></i>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="btn-theme-toggle theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="bi bi-sun-fill"></i>
+        </button>
+
+        <!-- Desktop Auth & CTAs -->
+        <div class="navbar-actions-desktop d-none d-lg-flex align-items-center gap-2 ms-2">
+          <a href="login.html" class="btn btn-sm btn-outline-arena">Login</a>
+          <a href="signup.html" class="btn btn-sm btn-outline-arena">Sign Up</a>
+          <a href="events.html" class="btn btn-sm btn-primary">
+            <i class="bi bi-ticket-perforated-fill"></i> Find Tickets
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button class="navbar-toggler d-lg-none btn-theme-toggle" type="button" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-3"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="navbar-collapse d-lg-none" id="arenaNavbarNav">
+      <button class="mobile-close-btn" aria-label="Close Navigation Drawer">
+        <i class="bi bi-x-lg"></i>
+      </button>
+
+      <div class="d-flex align-items-center gap-2 mb-4">
+        <div class="brand-icon">
+          <i class="bi bi-shield-shaded"></i>
+        </div>
+        <span class="brand-text">ARENA</span>
+      </div>
+
+      <a href="index.html" class="arena-nav-link active">Home</a>
+      
+      <!-- Mobile Sports Submenu -->
+      <div class="py-2">
+        <div class="text-muted small text-uppercase fw-bold mb-2">Sports Categories</div>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="events.html?sport=Football" class="badge-sport">Football</a>
+          <a href="events.html?sport=Cricket" class="badge-sport">Cricket</a>
+          <a href="events.html?sport=Basketball" class="badge-sport">Basketball</a>
+          <a href="events.html?sport=Tennis" class="badge-sport">Tennis</a>
+          <a href="events.html?sport=Rugby" class="badge-sport">Rugby</a>
+          <a href="events.html?sport=Formula+Racing" class="badge-sport">F1 Racing</a>
+        </div>
+      </div>
+
+      <a href="events.html" class="arena-nav-link">Fixtures & Matches</a>
+      <a href="venue-details.html" class="arena-nav-link">Stadiums & Venues</a>
+      <a href="ticket-details.html" class="arena-nav-link">Ticket Lookup</a>
+      <a href="help.html" class="arena-nav-link">Help & FAQs</a>
+
+      <!-- Mobile Action Buttons -->
+      <div class="navbar-actions-mobile">
+        <a href="events.html" class="btn btn-primary w-100 mb-2">
+          <i class="bi bi-ticket-perforated-fill"></i> Find Tickets
+        </a>
+        <div class="d-flex gap-2">
+          <a href="login.html" class="btn btn-outline-arena flex-grow-1">Login</a>
+          <a href="signup.html" class="btn btn-outline-arena flex-grow-1">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION
+       ========================================================================= -->
+  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=2000&q=80');">
+    <div class="hero-overlay"></div>
+    <div class="container-custom hero-content">
+      <div class="row align-items-center">
+        <div class="col-lg-10 col-xl-9">
+          
+          <div class="hero-ticker-pill">
+            <span class="ticker-pulse"></span>
+            <span class="small fw-bold text-uppercase tracking-wider">LIVE STADIUM TICKETING &bull; 2026 WORLDWIDE CALENDAR</span>
+          </div>
+
+          <h1 class="hero-title text-white">
+            THE GAME IS <span class="text-gradient-blue">BETTER LIVE.</span>
+          </h1>
+
+          <p class="hero-lead">
+            Discover the biggest sporting events, secure your verified seats and experience every unforgettable roar from inside the arena.
+          </p>
+
+          <div class="hero-ctas d-flex flex-wrap gap-3">
+            <a href="events.html" class="btn btn-lg btn-primary">
+              <i class="bi bi-compass"></i> Explore Events
+            </a>
+            <a href="venue-details.html" class="btn btn-lg btn-outline-arena">
+              <i class="bi bi-geo-alt"></i> Find Your Seats
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Compact Event Search Panel -->
+      <div class="event-search-panel">
+        <form action="events.html" method="GET" class="row g-3 align-items-end">
+          <div class="col-md-3">
+            <label class="search-field-label"><i class="bi bi-trophy"></i> Sport</label>
+            <select name="sport" class="arena-select" id="heroSportSelect">
+              <option value="">All Sports</option>
+              <option value="Football">Football</option>
+              <option value="Cricket">Cricket</option>
+              <option value="Basketball">Basketball</option>
+              <option value="Tennis">Tennis</option>
+              <option value="Rugby">Rugby</option>
+              <option value="Badminton">Badminton</option>
+              <option value="Formula Racing">Formula Racing</option>
+              <option value="Volleyball">Volleyball</option>
+            </select>
+          </div>
+
+          <div class="col-md-3">
+            <label class="search-field-label"><i class="bi bi-shield"></i> Team / Event</label>
+            <input type="text" name="query" class="arena-input" placeholder="e.g. Real Madrid, Finals" id="heroQueryInput">
+          </div>
+
+          <div class="col-md-3">
+            <label class="search-field-label"><i class="bi bi-geo-alt"></i> Venue / City</label>
+            <input type="text" name="venue" class="arena-input" placeholder="e.g. Wembley, London" id="heroVenueInput">
+          </div>
+
+          <div class="col-md-3">
+            <button type="submit" class="btn btn-primary w-100 py-2">
+              <i class="bi bi-search"></i> Search Events
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FEATURED EVENTS (Asymmetric Spotlight Grid)
+       ========================================================================= -->
+  <section class="py-5 my-4">
+    <div class="container-custom">
+      <div class="d-flex justify-content-between align-items-end section-header">
+        <div>
+          <span class="section-subtitle">Championship Clashes</span>
+          <h2>Featured Events</h2>
+        </div>
+        <a href="events.html" class="btn btn-sm btn-outline-arena d-none d-md-inline-flex">
+          View All Events <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="row g-4">
+        <!-- Prominent Spotlight Card -->
+        <div class="col-lg-7">
+          <div class="spotlight-card h-100" style="background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1200&q=80');">
+            <div class="spotlight-card-overlay"></div>
+            <div class="spotlight-card-content">
+              <div class="d-flex gap-2 mb-2">
+                <span class="badge-sport">Football</span>
+                <span class="badge-urgent">UEFA Champions League Final</span>
+              </div>
+              <h3 class="display-6 fw-bold mb-2 text-white">Real Madrid vs Manchester City</h3>
+              <p class="text-light opacity-75 mb-3">
+                <i class="bi bi-geo-alt-fill text-danger"></i> Wembley Stadium, London &bull; <i class="bi bi-calendar3"></i> Saturday, 14 June 2026
+              </p>
+              <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 pt-3 border-top border-subtle">
+                <div>
+                  <span class="price-indicator-label text-light">Tickets from</span>
+                  <span class="price-indicator-val text-white">$185</span>
+                </div>
+                <a href="booking.html?id=ucl-final-2026" class="btn btn-primary">
+                  <i class="bi bi-ticket-perforated-fill"></i> View Tickets
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 Supporting Secondary Cards -->
+        <div class="col-lg-5">
+          <div class="d-flex flex-column gap-4 h-100">
+            
+            <!-- Card 1: Cricket -->
+            <div class="arena-card flex-row align-items-stretch">
+              <div class="card-media" style="width: 40%; aspect-ratio: auto;">
+                <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=600&q=80" alt="ICC T20 World Cup Final">
+                <div class="card-media-overlay"></div>
+              </div>
+              <div class="card-body-arena" style="width: 60%;">
+                <div>
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="badge-sport">Cricket</span>
+                    <span class="badge-urgent small">Popular</span>
+                  </div>
+                  <h4 class="card-event-title fs-5 mb-1">
+                    <a href="event-details.html?id=t20-final-2026">India vs Australia</a>
+                  </h4>
+                  <div class="card-venue-text small mb-2">
+                    <i class="bi bi-geo-alt"></i> Narendra Modi Stadium
+                  </div>
+                </div>
+                <div class="card-footer-arena pt-2">
+                  <div>
+                    <span class="price-indicator-label">From</span>
+                    <span class="price-indicator-val text-primary fs-5">$75</span>
+                  </div>
+                  <a href="booking.html?id=t20-final-2026" class="btn btn-sm btn-primary">Book</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Basketball -->
+            <div class="arena-card flex-row align-items-stretch">
+              <div class="card-media" style="width: 40%; aspect-ratio: auto;">
+                <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=600&q=80" alt="NBA Finals Game 7">
+                <div class="card-media-overlay"></div>
+              </div>
+              <div class="card-body-arena" style="width: 60%;">
+                <div>
+                  <div class="d-flex justify-content-between mb-1">
+                    <span class="badge-sport">Basketball</span>
+                    <span class="badge-urgent small">Finals</span>
+                  </div>
+                  <h4 class="card-event-title fs-5 mb-1">
+                    <a href="event-details.html?id=nba-finals-2026">Celtics vs Warriors</a>
+                  </h4>
+                  <div class="card-venue-text small mb-2">
+                    <i class="bi bi-geo-alt"></i> TD Garden, Boston
+                  </div>
+                </div>
+                <div class="card-footer-arena pt-2">
+                  <div>
+                    <span class="price-indicator-label">From</span>
+                    <span class="price-indicator-val text-primary fs-5">$310</span>
+                  </div>
+                  <a href="booking.html?id=nba-finals-2026" class="btn btn-sm btn-primary">Book</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       UPCOMING FIXTURES SECTION
+       ========================================================================= -->
+  <section class="py-5 bg-surface-0 border-top border-bottom border-subtle">
+    <div class="container-custom">
+      
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+        <div>
+          <span class="section-subtitle">Live Schedule</span>
+          <h2>Upcoming Fixtures</h2>
+        </div>
+
+        <!-- Fixture Filter Tabs -->
+        <div class="d-flex flex-wrap gap-2 mt-3 mt-md-0" id="homeFixtureFilterTabs">
+          <button type="button" class="btn btn-sm btn-primary active" data-filter="all">All Sports</button>
+          <button type="button" class="btn btn-sm btn-outline-arena" data-filter="football">Football</button>
+          <button type="button" class="btn btn-sm btn-outline-arena" data-filter="cricket">Cricket</button>
+          <button type="button" class="btn btn-sm btn-outline-arena" data-filter="tournaments">Major Tournaments</button>
+        </div>
+      </div>
+
+      <!-- Fixtures Dynamic Container -->
+      <div id="homeFixturesContainer">
+        <!-- Loaded via fixtures.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       BROWSE BY SPORT
+       ========================================================================= -->
+  <section class="py-5 my-4">
+    <div class="container-custom">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Multi-Sport Coverage</span>
+        <h2>Browse by Sport</h2>
+        <p class="text-secondary">Official ticketing partner for premier international tournaments and leagues.</p>
+      </div>
+
+      <div class="row g-3 row-cols-2 row-cols-md-4">
+        <!-- Football -->
+        <div class="col">
+          <a href="events.html?sport=Football" class="sport-tile">
+            <div class="sport-tile-icon"><i class="bi bi-trophy"></i></div>
+            <h4 class="sport-tile-name">Football</h4>
+            <span class="sport-tile-count">38 Fixtures Available</span>
+          </a>
+        </div>
+        <!-- Cricket -->
+        <div class="col">
+          <a href="events.html?sport=Cricket" class="sport-tile">
+            <div class="sport-tile-icon"><i class="bi bi-bullseye"></i></div>
+            <h4 class="sport-tile-name">Cricket</h4>
+            <span class="sport-tile-count">24 Matches Live</span>
+          </a>
+        </div>
+        <!-- Basketball -->
+        <div class="col">
+          <a href="events.html?sport=Basketball" class="sport-tile">
+            <div class="sport-tile-icon"><i class="bi bi-dribbble"></i></div>
+            <h4 class="sport-tile-name">Basketball</h4>
+            <span class="sport-tile-count">19 Games Listed</span>
+          </a>
+        </div>
+        <!-- Tennis -->
+        <div class="col">
+          <a href="events.html?sport=Tennis" class="sport-tile">
+            <div class="sport-tile-icon"><i class="bi bi-circle"></i></div>
+            <h4 class="sport-tile-name">Tennis</h4>
+            <span class="sport-tile-count">12 Tournaments</span>
+          </a>
+        </div>
+        <!-- Rugby -->
+        <div class="col">
+          <a href="events.html?sport=Rugby" class="sport-tile">
+            <div class="sport-tile-icon"><i class="bi bi-shield"></i></div>
+            <h4 class="sport-tile-name">Rugby</h4>
+            <span class="sport-tile-count">15 Test Matches</span>
+          </a>
+        </div>
+        <!-- Badminton -->
+        <div class="col">
+          <a href="events.html?sport=Badminton" class="sport-tile">
+            <div class="sport-tile-icon"><i class="bi bi-lightning-charge"></i></div>
+            <h4 class="sport-tile-name">Badminton</h4>
+            <span class="sport-tile-count">8 World Tour Events</span>
+          </a>
+        </div>
+        <!-- Formula Racing -->
+        <div class="col">
+          <a href="events.html?sport=Formula+Racing" class="sport-tile">
+            <div class="sport-tile-icon"><i class="bi bi-speedometer2"></i></div>
+            <h4 class="sport-tile-name">Formula Racing</h4>
+            <span class="sport-tile-count">6 Grand Prix Weekends</span>
+          </a>
+        </div>
+        <!-- Volleyball -->
+        <div class="col">
+          <a href="events.html?sport=Volleyball" class="sport-tile">
+            <div class="sport-tile-icon"><i class="bi bi-activity"></i></div>
+            <h4 class="sport-tile-name">Volleyball</h4>
+            <span class="sport-tile-count">10 Championship Games</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FEATURED VENUES
+       ========================================================================= -->
+  <section class="py-5 bg-surface-0 border-top border-bottom border-subtle">
+    <div class="container-custom">
+      <div class="d-flex justify-content-between align-items-end section-header">
+        <div>
+          <span class="section-subtitle">Iconic Cathedrals of Sport</span>
+          <h2>Featured Venues</h2>
+        </div>
+        <a href="venue-details.html" class="btn btn-sm btn-outline-arena d-none d-md-inline-flex">
+          Explore All Venues <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="row g-4">
+        <!-- Venue 1: Wembley -->
+        <div class="col-md-4">
+          <div class="venue-card">
+            <div class="venue-media">
+              <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80" alt="Wembley Stadium London">
+              <span class="badge bg-dark text-white position-absolute top-0 end-0 m-3 px-3 py-1">Football & Rugby</span>
+            </div>
+            <div class="venue-body">
+              <div>
+                <h4 class="venue-title">Wembley Stadium</h4>
+                <p class="text-secondary small mb-0"><i class="bi bi-geo-alt-fill text-danger"></i> London, United Kingdom</p>
+                <div class="venue-specs">
+                  <span><i class="bi bi-people-fill text-primary"></i> 90,000 Capacity</span>
+                  <span><i class="bi bi-shield-check text-success"></i> UEFA Elite</span>
+                </div>
+              </div>
+              <div class="mt-3 pt-3 border-top border-subtle">
+                <a href="venue-details.html?venue=wembley" class="btn btn-sm btn-outline-primary w-100">
+                  <i class="bi bi-grid-3x3"></i> View Stadium & Map
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue 2: Narendra Modi -->
+        <div class="col-md-4">
+          <div class="venue-card">
+            <div class="venue-media">
+              <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80" alt="Narendra Modi Stadium Ahmedabad">
+              <span class="badge bg-dark text-white position-absolute top-0 end-0 m-3 px-3 py-1">Cricket</span>
+            </div>
+            <div class="venue-body">
+              <div>
+                <h4 class="venue-title">Narendra Modi Stadium</h4>
+                <p class="text-secondary small mb-0"><i class="bi bi-geo-alt-fill text-danger"></i> Ahmedabad, India</p>
+                <div class="venue-specs">
+                  <span><i class="bi bi-people-fill text-primary"></i> 132,000 Capacity</span>
+                  <span><i class="bi bi-trophy text-warning"></i> World Largest</span>
+                </div>
+              </div>
+              <div class="mt-3 pt-3 border-top border-subtle">
+                <a href="venue-details.html?venue=modi" class="btn btn-sm btn-outline-primary w-100">
+                  <i class="bi bi-grid-3x3"></i> View Stadium & Map
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Venue 3: Circuit de Monaco -->
+        <div class="col-md-4">
+          <div class="venue-card">
+            <div class="venue-media">
+              <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80" alt="Circuit de Monaco">
+              <span class="badge bg-dark text-white position-absolute top-0 end-0 m-3 px-3 py-1">Motorsport</span>
+            </div>
+            <div class="venue-body">
+              <div>
+                <h4 class="venue-title">Circuit de Monaco</h4>
+                <p class="text-secondary small mb-0"><i class="bi bi-geo-alt-fill text-danger"></i> Monte Carlo, Monaco</p>
+                <div class="venue-specs">
+                  <span><i class="bi bi-people-fill text-primary"></i> 37,000 Grandstands</span>
+                  <span><i class="bi bi-flag-fill text-info"></i> F1 Classic</span>
+                </div>
+              </div>
+              <div class="mt-3 pt-3 border-top border-subtle">
+                <a href="venue-details.html?venue=monaco" class="btn btn-sm btn-outline-primary w-100">
+                  <i class="bi bi-grid-3x3"></i> View Circuit & Map
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       WHY BOOK WITH ARENA?
+       ========================================================================= -->
+  <section class="py-5 my-4">
+    <div class="container-custom">
+      <div class="section-header text-center">
+        <span class="section-subtitle">The Matchday Standard</span>
+        <h2>Why Book with ARENA?</h2>
+        <p class="text-secondary">Engineered specifically for authentic, verified, high-stakes sports ticketing.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-box">
+            <div class="feature-icon-wrap"><i class="bi bi-grid-3x3-gap-fill"></i></div>
+            <h4 class="feature-title">Interactive Seat Selection</h4>
+            <p class="feature-desc">Choose your exact stand, tier, row and seat number with our responsive interactive stadium diagram.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-box">
+            <div class="feature-icon-wrap"><i class="bi bi-shield-check"></i></div>
+            <h4 class="feature-title">100% Guaranteed Authentic</h4>
+            <p class="feature-desc">Direct partnerships and club integrations ensure every digital match pass is verified at the turnstile.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-box">
+            <div class="feature-icon-wrap"><i class="bi bi-tag-fill"></i></div>
+            <h4 class="feature-title">Transparent Ticket Pricing</h4>
+            <p class="feature-desc">Zero hidden charges at checkout. Clear fee breakdowns and dynamic currency conversion before you book.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-box">
+            <div class="feature-icon-wrap"><i class="bi bi-qr-code"></i></div>
+            <h4 class="feature-title">Instant Digital Fast-Pass</h4>
+            <p class="feature-desc">Your verified match pass is issued immediately with Apple Wallet, Google Wallet, and printable pass support.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-box">
+            <div class="feature-icon-wrap"><i class="bi bi-cup-hot-fill"></i></div>
+            <h4 class="feature-title">VIP & Hospitality Access</h4>
+            <p class="feature-desc">Direct access to executive lounges, directors boxes, pitchside dugouts, and five-star culinary banquets.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="feature-box">
+            <div class="feature-icon-wrap"><i class="bi bi-headset"></i></div>
+            <h4 class="feature-title">24/7 Matchday Support</h4>
+            <p class="feature-desc">Dedicated stadium operations desk available on matchdays to assist with gate entry and seating queries.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FINAL CALL TO ACTION
+       ========================================================================= -->
+  <section class="py-5 position-relative text-center overflow-hidden" style="background: linear-gradient(180deg, var(--bg-surface-0) 0%, #001A4D 100%);">
+    <div class="container-custom py-4 position-relative z-2">
+      <span class="badge-urgent mb-3 px-3 py-2">LIVE ARENA TICKETS</span>
+      <h2 class="display-4 fw-bold mb-3 text-white">YOUR SEAT IS WAITING.</h2>
+      <p class="text-light opacity-75 max-w-600 mx-auto mb-4 fs-5" style="max-width: 620px;">
+        Don't watch the season from the sidelines. Secure verified stadium tickets now and feel the game from inside the roar.
+      </p>
+      <a href="events.html" class="btn btn-lg btn-primary">
+        <i class="bi bi-ticket-perforated-fill"></i> Find Tickets Now
+      </a>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="arena-footer">
+    <div class="container-custom">
+      <div class="row g-4">
+        <!-- Brand Info -->
+        <div class="col-lg-4">
+          <a href="index.html" class="navbar-brand-arena mb-3">
+            <div class="brand-icon">
+              <i class="bi bi-shield-shaded"></i>
+            </div>
+            <div>
+              <span class="brand-text">ARENA</span>
+              <span class="brand-tag">FEEL THE GAME</span>
+            </div>
+          </a>
+          <p class="text-secondary small pe-lg-4">
+            ARENA is the premier international sports ticketing platform. Secure, transparent, and direct stadium ticketing for football, cricket, basketball, tennis, and global championships.
+          </p>
+          <div class="d-flex gap-3 text-muted fs-5">
+            <a href="#" class="text-secondary" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-secondary" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-secondary" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-secondary" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Sports Links -->
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Sports</h5>
+          <ul class="footer-links">
+            <li><a href="events.html?sport=Football">Football</a></li>
+            <li><a href="events.html?sport=Cricket">Cricket</a></li>
+            <li><a href="events.html?sport=Basketball">Basketball</a></li>
+            <li><a href="events.html?sport=Tennis">Tennis</a></li>
+            <li><a href="events.html?sport=Rugby">Rugby</a></li>
+            <li><a href="events.html?sport=Formula+Racing">Formula Racing</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="events.html">All Fixtures</a></li>
+            <li><a href="venue-details.html">Stadiums & Maps</a></li>
+            <li><a href="ticket-details.html">Booking Lookup</a></li>
+            <li><a href="help.html">Help & FAQs</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li>
+            <li><a href="login.html">Sign In</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter & Guarantee -->
+        <div class="col-lg-4">
+          <h5 class="footer-heading">Match Alerts</h5>
+          <p class="text-secondary small">Get instant priority drop alerts when tickets for finals and derbies go on sale.</p>
+          <form class="d-flex gap-2" onsubmit="event.preventDefault(); window.ArenaToast ? window.ArenaToast.show('Subscribed to match alerts!', 'success') : alert('Subscribed');">
+            <input type="email" class="arena-input" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary text-nowrap">Join</button>
+          </form>
+          <div class="d-flex align-items-center gap-2 mt-3 text-muted small">
+            <i class="bi bi-shield-lock-fill text-success"></i> 256-bit SSL Encrypted Ticketing
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 ARENA Ticketing Technologies Inc. All rights reserved.</div>
+        <div class="d-flex gap-3">
+          <a href="help.html" class="text-muted small">Terms of Service</a>
+          <a href="help.html" class="text-muted small">Privacy Policy</a>
+          <a href="help.html" class="text-muted small">Matchday Regulations</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       GLOBAL QUICK SEARCH MODAL
+       ========================================================================= -->
+  <div class="modal fade" id="arenaQuickSearchModal" tabindex="-1" aria-labelledby="modalSearchLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-surface-1 border border-medium text-white">
+        <div class="modal-header border-subtle">
+          <h5 class="modal-title font-heading" id="modalSearchLabel"><i class="bi bi-search text-primary"></i> Discover Sports Fixtures</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="input-group mb-3">
+            <span class="input-group-text bg-surface-2 border-subtle text-primary"><i class="bi bi-search"></i></span>
+            <input type="text" class="form-control arena-input fs-5" id="modalSearchInput" placeholder="Type sport, team (e.g. Real Madrid), stadium, or city..." autofocus>
+          </div>
+          <div id="modalSearchResults" class="mt-3">
+            <div class="text-center py-4 text-muted">
+              <i class="bi bi-compass fs-2"></i>
+              <p class="small mt-2">Start typing to view instant match availability and ticket prices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/events.js"></script>
+  <script src="assets/js/fixtures.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize home fixtures list
+      window.ArenaFixtures.init('#homeFixturesContainer', '#homeFixtureFilterTabs');
+    });
+  </script>
+</body>
+</html>

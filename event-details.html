@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Match Details & Tickets | ARENA</title>
+  <meta name="description" content="View complete fixture schedule, ticket categories, stadium views, and secure your matchday passes with ARENA.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- PRIMARY NAVBAR -->
+  <header class="arena-navbar">
+    <div class="container-custom d-flex align-items-center justify-content-between">
+      <a href="index.html" class="navbar-brand-arena" aria-label="ARENA Homepage">
+        <div class="brand-icon"><i class="bi bi-shield-shaded"></i></div>
+        <div>
+          <span class="brand-text">ARENA</span>
+          <span class="brand-tag">FEEL THE GAME</span>
+        </div>
+      </a>
+
+      <nav class="d-none d-lg-flex align-items-center gap-1" aria-label="Main Navigation">
+        <a href="index.html" class="arena-nav-link">Home</a>
+        <a href="events.html" class="arena-nav-link active">Sports</a>
+        <a href="events.html" class="arena-nav-link">Fixtures</a>
+        <a href="venue-details.html" class="arena-nav-link">Venues</a>
+        <a href="events.html?offers=true" class="arena-nav-link">Offers</a>
+        <a href="help.html" class="arena-nav-link">Help</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn-nav-search" aria-label="Search events"><i class="bi bi-search"></i></button>
+        <button class="btn-theme-toggle theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
+
+        <div class="navbar-actions-desktop d-none d-lg-flex align-items-center gap-2 ms-2">
+          <a href="login.html" class="btn btn-sm btn-outline-arena">Login</a>
+          <a href="signup.html" class="btn btn-sm btn-outline-arena">Sign Up</a>
+          <a href="events.html" class="btn btn-sm btn-primary"><i class="bi bi-ticket-perforated-fill"></i> Find Tickets</a>
+        </div>
+
+        <button class="navbar-toggler d-lg-none btn-theme-toggle" type="button" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-3"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       EVENT CINEMATIC HERO
+       ========================================================================= -->
+  <section class="hero-section" id="eventHeroBg" style="min-height: 60vh; background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=2000&q=80');">
+    <div class="hero-overlay"></div>
+    <div class="container-custom hero-content py-4">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="badge-sport" id="eventHeroSport">Football</span>
+            <span class="badge-urgent" id="eventHeroStatus">Selling Fast</span>
+            <span class="text-light small opacity-75" id="eventHeroComp">UEFA Champions League Final</span>
+          </div>
+
+          <h1 class="hero-title text-white mb-2" id="eventHeroTitle">
+            Real Madrid vs Manchester City
+          </h1>
+
+          <div class="d-flex flex-wrap gap-4 text-light opacity-90 fs-6 mb-4" id="eventHeroMeta">
+            <span><i class="bi bi-geo-alt-fill text-danger"></i> <span id="eventHeroVenue">Wembley Stadium, London</span></span>
+            <span><i class="bi bi-calendar3 text-primary"></i> <span id="eventHeroDate">Saturday, 14 June 2026</span></span>
+            <span><i class="bi bi-clock text-primary"></i> <span id="eventHeroTime">20:00 BST</span></span>
+          </div>
+
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <a href="#ticketCategoriesSection" class="btn btn-lg btn-primary" id="btnHeroChooseTickets">
+              <i class="bi bi-ticket-perforated-fill"></i> Choose Tickets
+            </a>
+            <a href="venue-details.html?venue=wembley" class="btn btn-lg btn-outline-arena" id="btnHeroViewVenue">
+              <i class="bi bi-geo-alt"></i> Stadium Map & Info
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Starting Price Floating Box -->
+        <div class="col-lg-4 mt-4 mt-lg-0 text-lg-end">
+          <div class="d-inline-block p-4 rounded-3 bg-surface-1 border border-medium shadow-lg text-start" style="min-width: 260px;">
+            <span class="text-muted small text-uppercase fw-bold d-block">Official Verified Tickets</span>
+            <div class="d-flex align-items-baseline gap-2 my-1">
+              <span class="text-secondary small">From</span>
+              <span class="font-heading display-6 fw-bold text-primary" id="eventHeroPrice">$185</span>
+              <span class="text-muted small">/ ticket</span>
+            </div>
+            <div class="small text-success mb-3"><i class="bi bi-shield-check"></i> Instant Mobile Pass Guaranteed</div>
+            <a href="booking.html" class="btn btn-sm btn-accent w-100" id="btnHeroBookDirect">
+              Proceed to Booking
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       EVENT DETAILS & TICKET CATEGORIES
+       ========================================================================= -->
+  <section class="py-5">
+    <div class="container-custom">
+      <div class="row g-4">
+
+        <!-- Main Column: Match Details & Ticket Categories -->
+        <div class="col-lg-8">
+          
+          <!-- Match Overview Info Card -->
+          <div class="p-4 bg-surface-1 border border-subtle rounded-3 mb-4">
+            <h3 class="mb-3 font-heading"><i class="bi bi-info-circle text-primary"></i> Match & Fixture Details</h3>
+            <p class="text-secondary mb-4" id="eventLongDescription">
+              The pinnacle of European club football. Watch the two modern titans clash under the legendary arch of Wembley Stadium in an unforgettable night of sporting theatre. Two tactical masters battle for continental immortality.
+            </p>
+
+            <div class="row g-3 p-3 bg-surface-2 rounded-3 border border-subtle">
+              <div class="col-6 col-md-3">
+                <span class="text-muted small d-block">Competition</span>
+                <span class="fw-bold" id="matchDetailComp">UEFA Champions League</span>
+              </div>
+              <div class="col-6 col-md-3">
+                <span class="text-muted small d-block">Match Format</span>
+                <span class="fw-bold">90 Min + Extra Time / Penalties</span>
+              </div>
+              <div class="col-6 col-md-3">
+                <span class="text-muted small d-block">Turnstiles Open</span>
+                <span class="fw-bold text-primary">17:00 (3h before KO)</span>
+              </div>
+              <div class="col-6 col-md-3">
+                <span class="text-muted small d-block">Security Screening</span>
+                <span class="fw-bold text-warning">Strict Bag Policy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ticket Categories Section -->
+          <div id="ticketCategoriesSection" class="mb-5">
+            <div class="d-flex justify-content-between align-items-end mb-3">
+              <div>
+                <span class="section-subtitle">Official Seating Allocations</span>
+                <h3 class="font-heading mb-0">Select Ticket Category</h3>
+              </div>
+              <span class="text-muted small">All categories include seat allocation</span>
+            </div>
+
+            <!-- Dynamic Category Cards Container -->
+            <div id="eventDetailsCategoriesList" class="d-flex flex-column gap-3">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Matchday Schedule Timeline -->
+          <div class="p-4 bg-surface-1 border border-subtle rounded-3 mb-4">
+            <h4 class="mb-3 font-heading"><i class="bi bi-clock-history text-primary"></i> Matchday Schedule & Access</h4>
+            <div class="position-relative ps-4 border-start border-primary border-2 d-flex flex-column gap-3 ms-2">
+              <div>
+                <span class="badge bg-surface-2 text-primary fw-bold">17:00 BST</span>
+                <h6 class="mb-1 mt-1">Stadium Perimeter & Fan Village Opens</h6>
+                <p class="text-secondary small mb-0">Food trucks, live matchday DJ, merchandise megastores and entertainment zones activate.</p>
+              </div>
+              <div>
+                <span class="badge bg-surface-2 text-primary fw-bold">18:00 BST</span>
+                <h6 class="mb-1 mt-1">General Turnstiles & Hospitality Suites Open</h6>
+                <p class="text-secondary small mb-0">Digital passes scanned at turnstiles. Hospitality dining begins in club lounges.</p>
+              </div>
+              <div>
+                <span class="badge bg-surface-2 text-primary fw-bold">19:15 BST</span>
+                <h6 class="mb-1 mt-1">Squad Warm-Ups on Pitch</h6>
+                <p class="text-secondary small mb-0">Players take to the field for pre-match drills and shooting practice.</p>
+              </div>
+              <div>
+                <span class="badge-urgent fw-bold">20:00 BST</span>
+                <h6 class="mb-1 mt-1">Kickoff / Match Commences</h6>
+                <p class="text-secondary small mb-0">Live kickoff under the stadium floodlights.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Important Visitor Information Accordion -->
+          <div class="p-4 bg-surface-1 border border-subtle rounded-3">
+            <h4 class="mb-3 font-heading"><i class="bi bi-shield-check text-success"></i> Important Visitor Regulations</h4>
+            <div class="accordion arena-accordion" id="eventNoticeAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#noticeOne">
+                    Turnstile Entry & Digital Ticket Validation
+                  </button>
+                </h2>
+                <div id="noticeOne" class="accordion-collapse collapse show">
+                  <div class="accordion-body">
+                    All ARENA passes are verified mobile NFC/QR digital tickets. Ensure your mobile phone has sufficient battery charge. You can also present the high-density printed boarding pass downloaded directly from your ARENA confirmation.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#noticeTwo">
+                    Stadium Bag & Security Policy
+                  </button>
+                </h2>
+                <div id="noticeTwo" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    Only bags complying with the stadium bag policy (maximum A4 paper size: 21cm x 30cm) are permitted inside the turnstiles. Luggage lockers are located at adjacent metro transport hubs.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#noticeThree">
+                    Cancellation, Reschedule & Refund Policy
+                  </button>
+                </h2>
+                <div id="noticeThree" class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    If an event is rescheduled due to weather or broadcasting changes, your ticket remains 100% valid for the new date. Should an event be cancelled without a rescheduled date, full face-value refunds are guaranteed via your original payment method.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar: Venue Snapshot & Direct Action -->
+        <div class="col-lg-4">
+          <div class="sticky-top" style="top: 85px;">
+            
+            <!-- Venue Preview Card -->
+            <div class="venue-card mb-4">
+              <div class="venue-media">
+                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80" alt="Stadium Venue" id="sidebarVenueImg">
+                <span class="badge-urgent position-absolute top-0 end-0 m-3">Host Venue</span>
+              </div>
+              <div class="venue-body">
+                <div>
+                  <h4 class="venue-title fs-5 mb-1" id="sidebarVenueName">Wembley Stadium</h4>
+                  <p class="text-secondary small mb-2"><i class="bi bi-geo-alt-fill text-danger"></i> <span id="sidebarVenueCity">London, UK</span></p>
+                  <p class="small text-muted mb-0">Iconic landmark with 90,000 capacity and state-of-the-art matchday hospitality amenities.</p>
+                </div>
+                <div class="mt-3 pt-3 border-top border-subtle">
+                  <a href="venue-details.html?venue=wembley" class="btn btn-sm btn-outline-arena w-100" id="sidebarVenueLink">
+                    <i class="bi bi-map"></i> View Interactive Stadium Map
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guarantee Box -->
+            <div class="p-3 bg-surface-1 border border-subtle rounded-3 text-center">
+              <i class="bi bi-patch-check-fill text-primary fs-2"></i>
+              <h5 class="mt-2 mb-1">ARENA Buyer Guarantee</h5>
+              <p class="text-secondary small mb-3">
+                Every ticket sold on ARENA is 100% authentic, backed by full matchday entrance guarantee.
+              </p>
+              <div class="d-flex justify-content-center gap-3 text-muted small">
+                <span><i class="bi bi-lock-fill text-success"></i> Secure Checkout</span>
+                <span><i class="bi bi-headset text-primary"></i> 24/7 Matchday Help</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="arena-footer">
+    <div class="container-custom">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a href="index.html" class="navbar-brand-arena mb-3">
+            <div class="brand-icon"><i class="bi bi-shield-shaded"></i></div>
+            <div>
+              <span class="brand-text">ARENA</span>
+              <span class="brand-tag">FEEL THE GAME</span>
+            </div>
+          </a>
+          <p class="text-secondary small">ARENA is the premier international sports ticketing platform.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Sports</h5>
+          <ul class="footer-links">
+            <li><a href="events.html?sport=Football">Football</a></li>
+            <li><a href="events.html?sport=Cricket">Cricket</a></li>
+            <li><a href="events.html?sport=Basketball">Basketball</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="events.html">Fixtures</a></li>
+            <li><a href="venue-details.html">Stadiums</a></li>
+            <li><a href="ticket-details.html">Booking Lookup</a></li>
+            <li><a href="help.html">Help</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5 class="footer-heading">Buyer Guarantee</h5>
+          <p class="text-secondary small">Direct integration with venue turnstiles ensures 100% authentic entry.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 ARENA Ticketing Technologies Inc. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/events.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const eventId = params.get('id') || 'ucl-final-2026';
+      const event = window.ArenaEventsHelper.getById(eventId);
+
+      // Hydrate DOM
+      document.title = `${event.title} Tickets | ARENA`;
+      document.getElementById('eventHeroSport').textContent = event.sport;
+      document.getElementById('eventHeroStatus').textContent = event.status;
+      document.getElementById('eventHeroComp').textContent = event.competition;
+      document.getElementById('eventHeroTitle').textContent = event.title;
+      document.getElementById('eventHeroVenue').textContent = `${event.venue}, ${event.city}`;
+      document.getElementById('eventHeroDate').textContent = event.displayDate;
+      document.getElementById('eventHeroTime').textContent = event.time;
+      document.getElementById('eventHeroPrice').textContent = `$${event.priceFrom}`;
+      document.getElementById('eventLongDescription').textContent = event.description;
+      document.getElementById('matchDetailComp').textContent = event.competition;
+
+      document.getElementById('btnHeroBookDirect').href = `booking.html?id=${event.id}`;
+      document.getElementById('sidebarVenueName').textContent = event.venue;
+      document.getElementById('sidebarVenueCity').textContent = event.city;
+
+      // Render Categories
+      const catContainer = document.getElementById('eventDetailsCategoriesList');
+      if (catContainer) {
+        catContainer.innerHTML = event.categories.map((cat) => `
+          <div class="p-3 bg-surface-1 border border-subtle rounded-3 d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <h5 class="mb-0 font-heading">${cat.name}</h5>
+                <span class="badge-urgent small">${cat.available} Seats Left</span>
+              </div>
+              <p class="text-secondary small mb-1"><i class="bi bi-eye"></i> ${cat.view}</p>
+              <div class="d-flex gap-3 text-muted small">
+                <span><i class="bi bi-check2 text-success"></i> Reserved Seating</span>
+                <span><i class="bi bi-check2 text-success"></i> Turnstile Fast-Track</span>
+              </div>
+            </div>
+            <div class="text-md-end">
+              <span class="price-indicator-label">Price per ticket</span>
+              <div class="price-indicator-val text-primary mb-2">$${cat.price}</div>
+              <a href="booking.html?id=${event.id}&cat=${cat.id}" class="btn btn-sm btn-primary">
+                <i class="bi bi-ticket-perforated-fill"></i> Select Tickets
+              </a>
+            </div>
+          </div>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>
