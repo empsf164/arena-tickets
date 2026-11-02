@@ -9,14 +9,23 @@
 @media (max-width: 1024.98px) {
   /* In mobile and tab view, remove signup button in header as it is present in menu page */
   .header-signup-btn,
+  .arena-navbar .header-signup-btn,
+  .arena-navbar .d-flex.align-items-center.gap-2 > a.btn-primary,
+  .arena-navbar .d-flex.align-items-center > a.btn-primary,
+  .arena-navbar nav + div > a.btn-primary,
   .arena-header .d-flex.align-items-center.gap-2 > a.btn-primary,
   .arena-header .d-flex.align-items-center > a.btn-primary,
   .arena-header nav + div > a.btn-primary {
     display: none !important;
   }
 
-  /* Show mobile hamburger toggler and hide desktop nav links up to 1024px */
-  .arena-header nav {
+  /* In 1024px and below, remove desktop menus completely as hamburger menu is present */
+  .arena-navbar nav,
+  .arena-header nav,
+  header nav,
+  nav[aria-label="Main Navigation"],
+  header nav.d-lg-flex,
+  header nav.d-xl-flex {
     display: none !important;
   }
 
@@ -109,7 +118,10 @@
   .navbar-toggler {
     display: none !important;
   }
-  .arena-header nav {
+  .arena-navbar nav,
+  .arena-header nav,
+  header nav,
+  nav[aria-label="Main Navigation"] {
     display: flex !important;
   }
   .header-signup-btn {
