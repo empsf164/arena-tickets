@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="assets/css/theme.css">
@@ -29,28 +32,42 @@
         </div>
       </a>
 
+      <!-- Desktop Main Navigation (No dropdowns, Help changed to Contact, Offers removed) -->
       <nav class="d-none d-lg-flex align-items-center gap-1" aria-label="Main Navigation">
         <a href="index.html" class="arena-nav-link">Home</a>
         <a href="events.html" class="arena-nav-link active">Sports</a>
-        <a href="events.html" class="arena-nav-link">Fixtures</a>
         <a href="venue-details.html" class="arena-nav-link">Venues</a>
-        <a href="events.html?offers=true" class="arena-nav-link">Offers</a>
-        <a href="help.html" class="arena-nav-link">Help</a>
+        <a href="ticket-details.html" class="arena-nav-link">Ticket Lookup</a>
+        <a href="contact.html" class="arena-nav-link">Contact</a>
       </nav>
 
+      <!-- Right Actions (Sign Up CTA retained, search/theme/login/find tickets removed) -->
       <div class="d-flex align-items-center gap-2">
-        <button class="btn-nav-search" aria-label="Search events"><i class="bi bi-search"></i></button>
-        <button class="btn-theme-toggle theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
+        <a href="signup.html" class="btn btn-sm btn-primary header-signup-btn">Sign Up</a>
 
-        <div class="navbar-actions-desktop d-none d-lg-flex align-items-center gap-2 ms-2">
-          <a href="login.html" class="btn btn-sm btn-outline-arena">Login</a>
-          <a href="signup.html" class="btn btn-sm btn-outline-arena">Sign Up</a>
-          <a href="events.html" class="btn btn-sm btn-primary"><i class="bi bi-ticket-perforated-fill"></i> Find Tickets</a>
-        </div>
-
-        <button class="navbar-toggler d-lg-none btn-theme-toggle" type="button" aria-label="Toggle navigation">
+        <!-- Mobile Hamburger Toggler -->
+        <button class="navbar-toggler d-lg-none" type="button" aria-label="Toggle navigation">
           <i class="bi bi-list fs-3"></i>
         </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="navbar-collapse d-lg-none" id="arenaNavbarNav">
+      <button class="mobile-close-btn" aria-label="Close Navigation Drawer"><i class="bi bi-x-lg"></i></button>
+      <div class="d-flex align-items-center gap-2 mb-4">
+        <div class="brand-icon"><i class="bi bi-shield-shaded"></i></div>
+        <span class="brand-text">ARENA</span>
+      </div>
+      <a href="index.html" class="arena-nav-link">Home</a>
+      <a href="events.html" class="arena-nav-link active">Sports</a>
+      <a href="venue-details.html" class="arena-nav-link">Venues</a>
+      <a href="ticket-details.html" class="arena-nav-link">Ticket Lookup</a>
+      <a href="contact.html" class="arena-nav-link">Contact</a>
+
+      <!-- Mobile Action Button (Sign Up retained) -->
+      <div class="navbar-actions-mobile mt-3">
+        <a href="signup.html" class="btn btn-primary w-100">Sign Up</a>
       </div>
     </div>
   </header>
@@ -58,13 +75,13 @@
   <!-- =========================================================================
        EVENT CINEMATIC HERO
        ========================================================================= -->
-  <section class="hero-section" id="eventHeroBg" style="min-height: 60vh; background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=2000&q=80');">
+  <section class="hero-section" id="eventHeroBg" style="min-height: 60vh; background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=2000&q=80');">
     <div class="hero-overlay"></div>
     <div class="container-custom hero-content py-4">
-      <div class="row align-items-center">
-        <div class="col-lg-8">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-9 text-center">
           
-          <div class="d-flex align-items-center gap-2 mb-3">
+          <div class="d-inline-flex flex-wrap align-items-center justify-content-center gap-2 mb-3">
             <span class="badge-sport" id="eventHeroSport">Football</span>
             <span class="badge-urgent" id="eventHeroStatus">Selling Fast</span>
             <span class="text-light small opacity-75" id="eventHeroComp">UEFA Champions League Final</span>
@@ -74,15 +91,29 @@
             Real Madrid vs Manchester City
           </h1>
 
-          <div class="d-flex flex-wrap gap-4 text-light opacity-90 fs-6 mb-4" id="eventHeroMeta">
+          <div class="d-flex flex-wrap justify-content-center gap-4 text-light opacity-90 fs-6 mb-4" id="eventHeroMeta">
             <span><i class="bi bi-geo-alt-fill text-danger"></i> <span id="eventHeroVenue">Wembley Stadium, London</span></span>
             <span><i class="bi bi-calendar3 text-primary"></i> <span id="eventHeroDate">Saturday, 14 June 2026</span></span>
             <span><i class="bi bi-clock text-primary"></i> <span id="eventHeroTime">20:00 BST</span></span>
           </div>
 
-          <div class="d-flex flex-wrap align-items-center gap-3">
-            <a href="#ticketCategoriesSection" class="btn btn-lg btn-primary" id="btnHeroChooseTickets">
-              <i class="bi bi-ticket-perforated-fill"></i> Choose Tickets
+          <div class="d-inline-flex align-items-center gap-3 p-3 bg-surface-1 border border-medium rounded-3 shadow-lg mb-4 flex-wrap justify-content-center">
+            <div class="text-start">
+              <span class="text-muted small text-uppercase fw-bold d-block">Official Verified Tickets</span>
+              <div class="d-flex align-items-baseline gap-2">
+                <span class="text-secondary small">From</span>
+                <span class="font-heading fs-3 fw-bold text-primary" id="eventHeroPrice">$185</span>
+                <span class="text-muted small">/ ticket</span>
+              </div>
+            </div>
+            <a href="booking.html" class="btn btn-primary" id="btnHeroBookDirect">
+              Proceed to Booking <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+            <a href="#ticketCategoriesSection" class="btn btn-lg btn-outline-arena" id="btnHeroChooseTickets">
+              <i class="bi bi-ticket-perforated-fill"></i> View Seat Tiers
             </a>
             <a href="venue-details.html?venue=wembley" class="btn btn-lg btn-outline-arena" id="btnHeroViewVenue">
               <i class="bi bi-geo-alt"></i> Stadium Map & Info
@@ -90,23 +121,6 @@
           </div>
 
         </div>
-
-        <!-- Starting Price Floating Box -->
-        <div class="col-lg-4 mt-4 mt-lg-0 text-lg-end">
-          <div class="d-inline-block p-4 rounded-3 bg-surface-1 border border-medium shadow-lg text-start" style="min-width: 260px;">
-            <span class="text-muted small text-uppercase fw-bold d-block">Official Verified Tickets</span>
-            <div class="d-flex align-items-baseline gap-2 my-1">
-              <span class="text-secondary small">From</span>
-              <span class="font-heading display-6 fw-bold text-primary" id="eventHeroPrice">$185</span>
-              <span class="text-muted small">/ ticket</span>
-            </div>
-            <div class="small text-success mb-3"><i class="bi bi-shield-check"></i> Instant Mobile Pass Guaranteed</div>
-            <a href="booking.html" class="btn btn-sm btn-accent w-100" id="btnHeroBookDirect">
-              Proceed to Booking
-            </a>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -243,7 +257,7 @@
             <!-- Venue Preview Card -->
             <div class="venue-card mb-4">
               <div class="venue-media">
-                <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80" alt="Stadium Venue" id="sidebarVenueImg">
+                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80" alt="Stadium Venue" id="sidebarVenueImg">
                 <span class="badge-urgent position-absolute top-0 end-0 m-3">Host Venue</span>
               </div>
               <div class="venue-body">
@@ -284,40 +298,75 @@
   <footer class="arena-footer">
     <div class="container-custom">
       <div class="row g-4">
+        <!-- Brand Info -->
         <div class="col-lg-4">
           <a href="index.html" class="navbar-brand-arena mb-3">
-            <div class="brand-icon"><i class="bi bi-shield-shaded"></i></div>
+            <div class="brand-icon">
+              <i class="bi bi-shield-shaded"></i>
+            </div>
             <div>
               <span class="brand-text">ARENA</span>
               <span class="brand-tag">FEEL THE GAME</span>
             </div>
           </a>
-          <p class="text-secondary small">ARENA is the premier international sports ticketing platform.</p>
+          <p class="text-secondary small pe-lg-4">
+            ARENA is the premier international sports ticketing platform. Secure, transparent, and direct stadium ticketing for football, cricket, basketball, tennis, and global championships.
+          </p>
+          <div class="d-flex gap-3 text-muted fs-5">
+            <a href="#" class="text-secondary" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-secondary" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-secondary" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-secondary" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
         </div>
+
+        <!-- Sports Links -->
         <div class="col-6 col-lg-2">
           <h5 class="footer-heading">Sports</h5>
           <ul class="footer-links">
             <li><a href="events.html?sport=Football">Football</a></li>
             <li><a href="events.html?sport=Cricket">Cricket</a></li>
             <li><a href="events.html?sport=Basketball">Basketball</a></li>
+            <li><a href="events.html?sport=Tennis">Tennis</a></li>
+            <li><a href="events.html?sport=Rugby">Rugby</a></li>
+            <li><a href="events.html?sport=Formula+Racing">Formula Racing</a></li>
           </ul>
         </div>
+
+        <!-- Quick Links -->
         <div class="col-6 col-lg-2">
           <h5 class="footer-heading">Quick Links</h5>
           <ul class="footer-links">
-            <li><a href="events.html">Fixtures</a></li>
-            <li><a href="venue-details.html">Stadiums</a></li>
+            <li><a href="events.html">All Fixtures</a></li>
+            <li><a href="venue-details.html">Stadiums & Maps</a></li>
             <li><a href="ticket-details.html">Booking Lookup</a></li>
-            <li><a href="help.html">Help</a></li>
+            <li><a href="contact.html">Contact & Support</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li>
+            <li><a href="signup.html">Create Account</a></li>
           </ul>
         </div>
+
+        <!-- Newsletter & Guarantee -->
         <div class="col-lg-4">
-          <h5 class="footer-heading">Buyer Guarantee</h5>
-          <p class="text-secondary small">Direct integration with venue turnstiles ensures 100% authentic entry.</p>
+          <h5 class="footer-heading">Match Alerts</h5>
+          <p class="text-secondary small">Get instant priority drop alerts when tickets for finals and derbies go on sale.</p>
+          <form class="d-flex gap-2" onsubmit="event.preventDefault(); window.ArenaToast ? window.ArenaToast.show('Subscribed to match alerts!', 'success') : alert('Subscribed');">
+            <input type="email" class="arena-input" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary text-nowrap">Join</button>
+          </form>
+          <div class="d-flex align-items-center gap-2 mt-3 text-muted small">
+            <i class="bi bi-shield-lock-fill text-success"></i> 256-bit SSL Encrypted Ticketing
+          </div>
         </div>
       </div>
+
       <div class="footer-bottom">
         <div>&copy; 2026 ARENA Ticketing Technologies Inc. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Matchday Regulations</a>
+        </div>
       </div>
     </div>
   </footer>

@@ -10,7 +10,7 @@ const ARENA_EVENTS_DATA = [
     competition: 'UEFA Champions League Final',
     title: 'Real Madrid vs Manchester City',
     teams: {
-      home: { name: 'Real Madrid', crest: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=80&q=80', code: 'RMA' },
+      home: { name: 'Real Madrid', crest: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=80&q=80', code: 'RMA' },
       away: { name: 'Manchester City', crest: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=80&q=80', code: 'MCI' }
     },
     date: '2026-06-14',
@@ -24,7 +24,7 @@ const ARENA_EVENTS_DATA = [
     badgeClass: 'badge-urgent',
     featured: true,
     spotlight: true,
-    image: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1200&q=80',
     description: 'The pinnacle of European club football. Watch the two modern titans clash under the legendary arch of Wembley Stadium in an unforgettable night of sporting theatre.',
     categories: [
       { id: 'cat-ga', name: 'General Admission - Upper Tier', price: 185, available: 142, view: 'Elevated panoramic stadium view' },
@@ -230,7 +230,7 @@ const ARENA_EVENTS_DATA = [
     title: 'FC Barcelona vs Real Madrid',
     teams: {
       home: { name: 'FC Barcelona', crest: 'https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=80&q=80', code: 'BAR' },
-      away: { name: 'Real Madrid', crest: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=80&q=80', code: 'RMA' }
+      away: { name: 'Real Madrid', crest: 'https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=80&q=80', code: 'RMA' }
     },
     date: '2026-06-20',
     displayDate: 'Saturday, 20 June 2026',

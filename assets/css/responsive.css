@@ -4,9 +4,28 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   01. MOBILE NAVIGATION & DRAWER
+   01. MOBILE & TABLET NAVIGATION DRAWER & HEADER ACTIONS (Up to 1024px)
    -------------------------------------------------------------------------- */
-@media (max-width: 991.98px) {
+@media (max-width: 1024.98px) {
+  /* In mobile and tab view, remove signup button in header as it is present in menu page */
+  .header-signup-btn,
+  .arena-header .d-flex.align-items-center.gap-2 > a.btn-primary,
+  .arena-header .d-flex.align-items-center > a.btn-primary,
+  .arena-header nav + div > a.btn-primary {
+    display: none !important;
+  }
+
+  /* Show mobile hamburger toggler and hide desktop nav links up to 1024px */
+  .arena-header nav {
+    display: none !important;
+  }
+
+  .navbar-toggler {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
   .navbar-collapse {
     position: fixed;
     top: 0;
@@ -69,7 +88,7 @@
 
   .navbar-actions-mobile {
     margin-top: 2rem;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     gap: 0.85rem;
     width: 100%;
@@ -80,17 +99,113 @@
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1025px) {
   .mobile-close-btn {
     display: none !important;
   }
   .navbar-actions-mobile {
     display: none !important;
   }
+  .navbar-toggler {
+    display: none !important;
+  }
+  .arena-header nav {
+    display: flex !important;
+  }
+  .header-signup-btn {
+    display: inline-flex !important;
+  }
 }
 
 /* --------------------------------------------------------------------------
-   02. TABLET & MOBILE LAYOUT ADJUSTMENTS
+   02. TAB & 1024PX CARD GRIDS: 2 CARDS PER ROW & LAST ODD CARD CENTERED
+   -------------------------------------------------------------------------- */
+@media (min-width: 600px) and (max-width: 1024.98px) {
+  /* Center rows containing cards to ensure centered odd cards */
+  #eventsResultContainer,
+  section .row:has(.arena-card),
+  section .row:has(.venue-card),
+  section .row:has(.feature-box),
+  section .row:has(.sport-tile),
+  section .row:has(.feature-icon-wrap),
+  section .row.row-cols-md-3,
+  section .row.row-cols-md-4,
+  section .row.row-cols-lg-3,
+  section .row.row-cols-lg-4,
+  main .row:has(.arena-card),
+  main .row:has(.venue-card),
+  main .row:has(.feature-box),
+  main .row:has(.feature-icon-wrap),
+  main .row.row-cols-md-3,
+  main .row.row-cols-md-4,
+  main .row.row-cols-lg-3,
+  main .row.row-cols-lg-4,
+  .cards-grid-tab-center {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  /* Exactly 2 cards per row (50% width) in all pages and all sections */
+  #eventsResultContainer > div:not(.col-12),
+  section .row:has(.arena-card) > div:not(.col-12),
+  section .row:has(.venue-card) > div,
+  section .row:has(.feature-box) > div,
+  section .row:has(.sport-tile) > div,
+  section .row:has(.feature-icon-wrap) > div,
+  section .row.row-cols-md-3 > .col,
+  section .row.row-cols-md-4 > .col,
+  section .row.row-cols-lg-3 > .col,
+  section .row.row-cols-lg-4 > .col,
+  main .row:has(.arena-card) > div:not(.col-12),
+  main .row:has(.venue-card) > div,
+  main .row:has(.feature-box) > div,
+  main .row:has(.feature-icon-wrap) > div,
+  main .row.row-cols-md-3 > .col,
+  main .row.row-cols-md-4 > .col,
+  main .row.row-cols-lg-3 > .col,
+  main .row.row-cols-lg-4 > .col,
+  .event-card-col,
+  .venue-card-col,
+  .feature-card-col,
+  .topic-card-col,
+  .social-card-col {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  /* Align the last odd-numbered card in center */
+  #eventsResultContainer > div:not(.col-12):last-child:nth-child(odd),
+  section .row:has(.arena-card) > div:not(.col-12):last-child:nth-child(odd),
+  section .row:has(.venue-card) > div:last-child:nth-child(odd),
+  section .row:has(.feature-box) > div:last-child:nth-child(odd),
+  section .row:has(.sport-tile) > div:last-child:nth-child(odd),
+  section .row:has(.feature-icon-wrap) > div:last-child:nth-child(odd),
+  section .row.row-cols-md-3 > .col:last-child:nth-child(odd),
+  section .row.row-cols-md-4 > .col:last-child:nth-child(odd),
+  section .row.row-cols-lg-3 > .col:last-child:nth-child(odd),
+  section .row.row-cols-lg-4 > .col:last-child:nth-child(odd),
+  main .row:has(.arena-card) > div:not(.col-12):last-child:nth-child(odd),
+  main .row:has(.venue-card) > div:last-child:nth-child(odd),
+  main .row:has(.feature-box) > div:last-child:nth-child(odd),
+  main .row:has(.feature-icon-wrap) > div:last-child:nth-child(odd),
+  main .row.row-cols-md-3 > .col:last-child:nth-child(odd),
+  main .row.row-cols-md-4 > .col:last-child:nth-child(odd),
+  main .row.row-cols-lg-3 > .col:last-child:nth-child(odd),
+  main .row.row-cols-lg-4 > .col:last-child:nth-child(odd),
+  .event-card-col:last-child:nth-child(odd),
+  .venue-card-col:last-child:nth-child(odd),
+  .feature-card-col:last-child:nth-child(odd),
+  .topic-card-col:last-child:nth-child(odd),
+  .social-card-col:last-child:nth-child(odd) {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   03. MOBILE LAYOUT ADJUSTMENTS (< 768px)
    -------------------------------------------------------------------------- */
 @media (max-width: 767.98px) {
   .hero-section {

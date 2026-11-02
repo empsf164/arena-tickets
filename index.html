@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +16,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="assets/css/theme.css">
@@ -41,87 +44,21 @@
         </div>
       </a>
 
-      <!-- Desktop Main Navigation -->
+      <!-- Desktop Main Navigation (No dropdowns, Help changed to Contact, Offers removed) -->
       <nav class="d-none d-lg-flex align-items-center gap-1" aria-label="Main Navigation">
         <a href="index.html" class="arena-nav-link active">Home</a>
-
-        <!-- Sports Dropdown -->
-        <div class="dropdown">
-          <a href="#" class="arena-nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Sports
-          </a>
-          <ul class="dropdown-menu arena-dropdown-menu">
-            <li><a class="arena-dropdown-item" href="events.html?sport=Football"><i class="bi bi-trophy"></i> Football</a></li>
-            <li><a class="arena-dropdown-item" href="events.html?sport=Cricket"><i class="bi bi-bullseye"></i> Cricket</a></li>
-            <li><a class="arena-dropdown-item" href="events.html?sport=Basketball"><i class="bi bi-dribbble"></i> Basketball</a></li>
-            <li><a class="arena-dropdown-item" href="events.html?sport=Tennis"><i class="bi bi-circle"></i> Tennis</a></li>
-            <li><a class="arena-dropdown-item" href="events.html?sport=Rugby"><i class="bi bi-shield"></i> Rugby</a></li>
-            <li><a class="arena-dropdown-item" href="events.html?sport=Badminton"><i class="bi bi-lightning-charge"></i> Badminton</a></li>
-            <li><a class="arena-dropdown-item" href="events.html?sport=Formula+Racing"><i class="bi bi-speedometer2"></i> Formula Racing</a></li>
-            <li><a class="arena-dropdown-item" href="events.html?sport=Volleyball"><i class="bi bi-activity"></i> Volleyball</a></li>
-            <li><hr class="dropdown-divider border-subtle my-1"></li>
-            <li><a class="arena-dropdown-item fw-bold text-primary" href="events.html"><i class="bi bi-grid-fill"></i> All Sports</a></li>
-          </ul>
-        </div>
-
-        <!-- Fixtures Dropdown -->
-        <div class="dropdown">
-          <a href="#" class="arena-nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Fixtures
-          </a>
-          <ul class="dropdown-menu arena-dropdown-menu">
-            <li><a class="arena-dropdown-item" href="events.html?filter=today"><i class="bi bi-clock-history"></i> Today's Events</a></li>
-            <li><a class="arena-dropdown-item" href="events.html?filter=upcoming"><i class="bi bi-calendar-event"></i> Upcoming Matches</a></li>
-            <li><a class="arena-dropdown-item" href="events.html?filter=thisweek"><i class="bi bi-calendar-week"></i> This Week</a></li>
-            <li><a class="arena-dropdown-item" href="events.html?filter=thismonth"><i class="bi bi-calendar-month"></i> This Month</a></li>
-            <li><a class="arena-dropdown-item" href="events.html?filter=tournaments"><i class="bi bi-award"></i> Major Tournaments</a></li>
-            <li><a class="arena-dropdown-item" href="events.html?filter=popular"><i class="bi bi-fire"></i> Popular Events</a></li>
-          </ul>
-        </div>
-
-        <!-- Venues Dropdown -->
-        <div class="dropdown">
-          <a href="#" class="arena-nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Venues
-          </a>
-          <ul class="dropdown-menu arena-dropdown-menu">
-            <li><a class="arena-dropdown-item" href="venue-details.html?venue=wembley"><i class="bi bi-geo-alt"></i> Featured Stadiums</a></li>
-            <li><a class="arena-dropdown-item" href="venue-details.html?venue=wembley"><i class="bi bi-building"></i> Football Stadiums</a></li>
-            <li><a class="arena-dropdown-item" href="venue-details.html?venue=modi"><i class="bi bi-layers"></i> Cricket Grounds</a></li>
-            <li><a class="arena-dropdown-item" href="venue-details.html?venue=tdgarden"><i class="bi bi-bank"></i> Indoor Arenas</a></li>
-            <li><a class="arena-dropdown-item" href="venue-details.html?venue=monaco"><i class="bi bi-flag"></i> Racing Circuits</a></li>
-            <li><hr class="dropdown-divider border-subtle my-1"></li>
-            <li><a class="arena-dropdown-item fw-bold text-primary" href="venue-details.html"><i class="bi bi-map"></i> All Venues</a></li>
-          </ul>
-        </div>
-
-        <a href="events.html?offers=true" class="arena-nav-link">Offers</a>
-        <a href="help.html" class="arena-nav-link">Help</a>
+        <a href="events.html" class="arena-nav-link">Sports</a>
+        <a href="venue-details.html" class="arena-nav-link">Venues</a>
+        <a href="ticket-details.html" class="arena-nav-link">Ticket Lookup</a>
+        <a href="contact.html" class="arena-nav-link">Contact</a>
       </nav>
 
-      <!-- Right Actions (Search, Theme, Auth, CTA) -->
+      <!-- Right Actions (Sign Up CTA retained, search/theme/login/find tickets removed) -->
       <div class="d-flex align-items-center gap-2">
-        <!-- Quick Search -->
-        <button class="btn-nav-search" aria-label="Search events" title="Search sporting fixtures">
-          <i class="bi bi-search"></i>
-        </button>
+        <a href="signup.html" class="btn btn-sm btn-primary header-signup-btn">Sign Up</a>
 
-        <!-- Theme Toggle -->
-        <button class="btn-theme-toggle theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
-          <i class="bi bi-sun-fill"></i>
-        </button>
-
-        <!-- Desktop Auth & CTAs -->
-        <div class="navbar-actions-desktop d-none d-lg-flex align-items-center gap-2 ms-2">
-          <a href="login.html" class="btn btn-sm btn-outline-arena">Login</a>
-          <a href="signup.html" class="btn btn-sm btn-outline-arena">Sign Up</a>
-          <a href="events.html" class="btn btn-sm btn-primary">
-            <i class="bi bi-ticket-perforated-fill"></i> Find Tickets
-          </a>
-        </div>
-
-        <!-- Mobile Hamburger -->
-        <button class="navbar-toggler d-lg-none btn-theme-toggle" type="button" aria-label="Toggle navigation">
+        <!-- Mobile Hamburger Toggler -->
+        <button class="navbar-toggler d-lg-none" type="button" aria-label="Toggle navigation">
           <i class="bi bi-list fs-3"></i>
         </button>
       </div>
@@ -142,34 +79,14 @@
       </div>
 
       <a href="index.html" class="arena-nav-link active">Home</a>
-      
-      <!-- Mobile Sports Submenu -->
-      <div class="py-2">
-        <div class="text-muted small text-uppercase fw-bold mb-2">Sports Categories</div>
-        <div class="d-flex flex-wrap gap-2">
-          <a href="events.html?sport=Football" class="badge-sport">Football</a>
-          <a href="events.html?sport=Cricket" class="badge-sport">Cricket</a>
-          <a href="events.html?sport=Basketball" class="badge-sport">Basketball</a>
-          <a href="events.html?sport=Tennis" class="badge-sport">Tennis</a>
-          <a href="events.html?sport=Rugby" class="badge-sport">Rugby</a>
-          <a href="events.html?sport=Formula+Racing" class="badge-sport">F1 Racing</a>
-        </div>
-      </div>
-
-      <a href="events.html" class="arena-nav-link">Fixtures & Matches</a>
-      <a href="venue-details.html" class="arena-nav-link">Stadiums & Venues</a>
+      <a href="events.html" class="arena-nav-link">Sports</a>
+      <a href="venue-details.html" class="arena-nav-link">Venues</a>
       <a href="ticket-details.html" class="arena-nav-link">Ticket Lookup</a>
-      <a href="help.html" class="arena-nav-link">Help & FAQs</a>
+      <a href="contact.html" class="arena-nav-link">Contact</a>
 
-      <!-- Mobile Action Buttons -->
-      <div class="navbar-actions-mobile">
-        <a href="events.html" class="btn btn-primary w-100 mb-2">
-          <i class="bi bi-ticket-perforated-fill"></i> Find Tickets
-        </a>
-        <div class="d-flex gap-2">
-          <a href="login.html" class="btn btn-outline-arena flex-grow-1">Login</a>
-          <a href="signup.html" class="btn btn-outline-arena flex-grow-1">Sign Up</a>
-        </div>
+      <!-- Mobile Action Button (Sign Up retained) -->
+      <div class="navbar-actions-mobile mt-3">
+        <a href="signup.html" class="btn btn-primary w-100">Sign Up</a>
       </div>
     </div>
   </header>
@@ -177,13 +94,13 @@
   <!-- =========================================================================
        HERO SECTION
        ========================================================================= -->
-  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=2000&q=80');">
+  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=2000&q=80');">
     <div class="hero-overlay"></div>
     <div class="container-custom hero-content">
-      <div class="row align-items-center">
-        <div class="col-lg-10 col-xl-9">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10 col-xl-9 d-flex flex-column align-items-center">
           
-          <div class="hero-ticker-pill">
+          <div class="hero-ticker-pill mx-auto">
             <span class="ticker-pulse"></span>
             <span class="small fw-bold text-uppercase tracking-wider">LIVE STADIUM TICKETING &bull; 2026 WORLDWIDE CALENDAR</span>
           </div>
@@ -192,11 +109,11 @@
             THE GAME IS <span class="text-gradient-blue">BETTER LIVE.</span>
           </h1>
 
-          <p class="hero-lead">
+          <p class="hero-lead mx-auto">
             Discover the biggest sporting events, secure your verified seats and experience every unforgettable roar from inside the arena.
           </p>
 
-          <div class="hero-ctas d-flex flex-wrap gap-3">
+          <div class="hero-ctas d-flex flex-wrap gap-3 justify-content-center">
             <a href="events.html" class="btn btn-lg btn-primary">
               <i class="bi bi-compass"></i> Explore Events
             </a>
@@ -209,8 +126,8 @@
       </div>
 
       <!-- Compact Event Search Panel -->
-      <div class="event-search-panel">
-        <form action="events.html" method="GET" class="row g-3 align-items-end">
+      <div class="event-search-panel mx-auto" style="max-width: 1040px;">
+        <form action="events.html" method="GET" class="row g-3 align-items-end text-start">
           <div class="col-md-3">
             <label class="search-field-label"><i class="bi bi-trophy"></i> Sport</label>
             <select name="sport" class="arena-select" id="heroSportSelect">
@@ -265,7 +182,7 @@
       <div class="row g-4">
         <!-- Prominent Spotlight Card -->
         <div class="col-lg-7">
-          <div class="spotlight-card h-100" style="background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1200&q=80');">
+          <div class="spotlight-card h-100" style="background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1200&q=80');">
             <div class="spotlight-card-overlay"></div>
             <div class="spotlight-card-content">
               <div class="d-flex gap-2 mb-2">
@@ -363,10 +280,13 @@
   <section class="py-5 bg-surface-0 border-top border-bottom border-subtle">
     <div class="container-custom">
       
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 pb-3 border-bottom border-subtle">
         <div>
-          <span class="section-subtitle">Live Schedule</span>
-          <h2>Upcoming Fixtures</h2>
+          <div class="d-inline-flex align-items-center gap-2 mb-1">
+            <span class="ticker-pulse"></span>
+            <span class="section-subtitle mb-0">Live Schedule</span>
+          </div>
+          <h2 class="mb-0">Upcoming Fixtures</h2>
         </div>
 
         <!-- Fixture Filter Tabs -->
@@ -484,10 +404,10 @@
 
       <div class="row g-4">
         <!-- Venue 1: Wembley -->
-        <div class="col-md-4">
+        <div class="col-md-4 venue-card-col">
           <div class="venue-card">
             <div class="venue-media">
-              <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80" alt="Wembley Stadium London">
+              <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80" alt="Wembley Stadium London">
               <span class="badge bg-dark text-white position-absolute top-0 end-0 m-3 px-3 py-1">Football & Rugby</span>
             </div>
             <div class="venue-body">
@@ -509,7 +429,7 @@
         </div>
 
         <!-- Venue 2: Narendra Modi -->
-        <div class="col-md-4">
+        <div class="col-md-4 venue-card-col">
           <div class="venue-card">
             <div class="venue-media">
               <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80" alt="Narendra Modi Stadium Ahmedabad">
@@ -534,7 +454,7 @@
         </div>
 
         <!-- Venue 3: Circuit de Monaco -->
-        <div class="col-md-4">
+        <div class="col-md-4 venue-card-col">
           <div class="venue-card">
             <div class="venue-media">
               <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80" alt="Circuit de Monaco">
@@ -690,9 +610,9 @@
             <li><a href="events.html">All Fixtures</a></li>
             <li><a href="venue-details.html">Stadiums & Maps</a></li>
             <li><a href="ticket-details.html">Booking Lookup</a></li>
-            <li><a href="help.html">Help & FAQs</a></li>
+            <li><a href="contact.html">Contact & Support</a></li>
             <li><a href="coming-soon.html">Coming Soon</a></li>
-            <li><a href="login.html">Sign In</a></li>
+            <li><a href="signup.html">Create Account</a></li>
           </ul>
         </div>
 
@@ -712,10 +632,10 @@
 
       <div class="footer-bottom">
         <div>&copy; 2026 ARENA Ticketing Technologies Inc. All rights reserved.</div>
-        <div class="d-flex gap-3">
-          <a href="help.html" class="text-muted small">Terms of Service</a>
-          <a href="help.html" class="text-muted small">Privacy Policy</a>
-          <a href="help.html" class="text-muted small">Matchday Regulations</a>
+        <div class="footer-legal-links">
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Matchday Regulations</a>
         </div>
       </div>
     </div>

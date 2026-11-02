@@ -17,7 +17,7 @@
         <div class="fixture-teams">
           <div class="team-item team-home">
             <span class="text-truncate">${fixture.teams.home.name}</span>
-            <img src="${fixture.teams.home.crest}" alt="${fixture.teams.home.name}" class="team-crest" onerror="this.src='https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=60&q=80'">
+            <img src="${fixture.teams.home.crest}" alt="${fixture.teams.home.name}" class="team-crest" onerror="this.src='https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=60&q=80'">
           </div>
 
           <div class="fixture-vs">VS</div>

@@ -86,8 +86,8 @@
       });
     }
 
-    // Close mobile nav when clicking any nav item (unless dropdown toggle)
-    document.querySelectorAll('.navbar-collapse .nav-link:not(.dropdown-toggle)').forEach((link) => {
+    // Close mobile nav when clicking any nav item
+    document.querySelectorAll('.navbar-collapse a').forEach((link) => {
       link.addEventListener('click', () => {
         if (navCollapse && navCollapse.classList.contains('show')) {
           navCollapse.classList.remove('show');

@@ -60,7 +60,8 @@ arena-tickets/
 ├── login.html                   # Sign-in authentication (no dashboard redirect)
 ├── signup.html                  # Member registration (redirects to discovery)
 ├── forgot-password.html         # Email recovery with interactive 60s cooldown timer
-├── help.html                    # Searchable FAQ accordion & matchday desk contact form
+├── help.html                    # Searchable FAQ accordion & matchday desk contact form (alias)
+├── contact.html                 # Contact us & matchday support desk page
 ├── 404.html                     # Offside sports-themed 404 error page
 ├── coming-soon.html             # Tournament presale countdown & priority ballot alert
 │

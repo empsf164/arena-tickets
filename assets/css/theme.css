@@ -50,7 +50,9 @@
    DARK THEME (Default)
    Deep Midnight Navy + Stadium Black + Electric Cobalt
    -------------------------------------------------------------------------- */
+:root,
 [data-theme="dark"],
+[data-bs-theme="dark"],
 :root:not([data-theme="light"]) {
   color-scheme: dark;
 
@@ -59,17 +61,17 @@
   --bg-surface-1: #0D1527;
   --bg-surface-2: #141F38;
   --bg-surface-3: #1B2948;
-  --bg-glass: rgba(13, 21, 39, 0.78);
-  --bg-glass-strong: rgba(8, 13, 26, 0.92);
+  --bg-glass: rgba(13, 21, 39, 0.85);
+  --bg-glass-strong: rgba(8, 13, 26, 0.95);
 
   --text-primary: #FFFFFF;
-  --text-secondary: #94A3B8;
-  --text-muted: #64748B;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
   --text-inverse: #050811;
 
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-medium: rgba(255, 255, 255, 0.15);
-  --border-bright: rgba(0, 82, 255, 0.5);
+  --border-subtle: rgba(255, 255, 255, 0.12);
+  --border-medium: rgba(255, 255, 255, 0.22);
+  --border-bright: rgba(0, 82, 255, 0.6);
 
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
@@ -95,58 +97,15 @@
 
   /* Card Gradients */
   --gradient-overlay: linear-gradient(180deg, rgba(5, 8, 17, 0.1) 0%, rgba(5, 8, 17, 0.88) 75%, #050811 100%);
-  --gradient-hero: linear-gradient(180deg, rgba(5, 8, 17, 0.5) 0%, rgba(5, 8, 17, 0.85) 65%, #050811 100%);
+  --gradient-hero: linear-gradient(180deg, rgba(5, 8, 17, 0.55) 0%, rgba(5, 8, 17, 0.88) 65%, #050811 100%);
   --gradient-accent: linear-gradient(135deg, #0052FF 0%, #1A6CFF 100%);
+
+  /* Bootstrap 5 Theme Variable Overrides */
+  --bs-body-color: #CBD5E1;
+  --bs-body-bg: #050811;
+  --bs-emphasis-color: #FFFFFF;
+  --bs-secondary-color: #94A3B8;
+  --bs-tertiary-color: #64748B;
+  --bs-border-color: rgba(255, 255, 255, 0.14);
 }
 
-/* --------------------------------------------------------------------------
-   LIGHT THEME
-   Clean White + Cool Gray + Deep Navy + Cobalt Blue
-   -------------------------------------------------------------------------- */
-[data-theme="light"] {
-  color-scheme: light;
-
-  --bg-body: #F4F6FB;
-  --bg-surface-0: #FFFFFF;
-  --bg-surface-1: #FFFFFF;
-  --bg-surface-2: #EDF2F9;
-  --bg-surface-3: #E1E8F4;
-  --bg-glass: rgba(255, 255, 255, 0.85);
-  --bg-glass-strong: rgba(255, 255, 255, 0.96);
-
-  --text-primary: #0A1128;
-  --text-secondary: #475569;
-  --text-muted: #8492A6;
-  --text-inverse: #FFFFFF;
-
-  --border-subtle: rgba(10, 17, 40, 0.08);
-  --border-medium: rgba(10, 17, 40, 0.16);
-  --border-bright: rgba(0, 82, 255, 0.6);
-
-  --shadow-sm: 0 2px 6px rgba(10, 17, 40, 0.06);
-  --shadow-md: 0 8px 20px rgba(10, 17, 40, 0.08);
-  --shadow-lg: 0 16px 36px rgba(10, 17, 40, 0.12);
-  --shadow-glow: 0 0 24px rgba(0, 82, 255, 0.15);
-
-  --turf-color: #059669;
-  --turf-glow: rgba(5, 150, 105, 0.15);
-
-  /* Stadium Seating Map States */
-  --seat-avail-bg: #E2E8F0;
-  --seat-avail-border: #CBD5E1;
-  --seat-avail-text: #0F172A;
-  --seat-selected-bg: #0052FF;
-  --seat-selected-border: #0041CC;
-  --seat-selected-text: #FFFFFF;
-  --seat-sold-bg: #F1F5F9;
-  --seat-sold-border: #E2E8F0;
-  --seat-sold-text: #94A3B8;
-  --seat-vip-bg: #FEF3C7;
-  --seat-vip-border: #D97706;
-  --seat-vip-text: #92400E;
-
-  /* Card Gradients */
-  --gradient-overlay: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(244, 246, 251, 0.85) 60%, #F4F6FB 100%);
-  --gradient-hero: linear-gradient(180deg, rgba(10, 17, 40, 0.6) 0%, rgba(10, 17, 40, 0.85) 65%, #0A1128 100%);
-  --gradient-accent: linear-gradient(135deg, #0052FF 0%, #0041CC 100%);
-}

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="dark" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Help & Matchday Support Desk | ARENA</title>
-  <meta name="description" content="Find answers to frequently asked questions about ticket booking, stadium turnstile entry, cancellation policies, and contact ARENA matchday support.">
+  <title>Contact & Matchday Support Desk | ARENA</title>
+  <meta name="description" content="Contact ARENA matchday support, submit inquiries, and find answers to frequently asked questions about ticket booking, stadium turnstile entry, and cancellation policies.">
 
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="assets/css/theme.css">
@@ -29,18 +32,42 @@
         </div>
       </a>
 
+      <!-- Desktop Main Navigation (No dropdowns, Help changed to Contact, Offers removed) -->
       <nav class="d-none d-lg-flex align-items-center gap-1" aria-label="Main Navigation">
         <a href="index.html" class="arena-nav-link">Home</a>
         <a href="events.html" class="arena-nav-link">Sports</a>
-        <a href="events.html" class="arena-nav-link">Fixtures</a>
         <a href="venue-details.html" class="arena-nav-link">Venues</a>
         <a href="ticket-details.html" class="arena-nav-link">Ticket Lookup</a>
-        <a href="help.html" class="arena-nav-link active">Help</a>
+        <a href="contact.html" class="arena-nav-link active">Contact</a>
       </nav>
 
+      <!-- Right Actions (Sign Up CTA retained, search/theme/login/find tickets removed) -->
       <div class="d-flex align-items-center gap-2">
-        <button class="btn-theme-toggle theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-sun-fill"></i></button>
-        <a href="events.html" class="btn btn-sm btn-primary"><i class="bi bi-ticket-perforated-fill"></i> Find Tickets</a>
+        <a href="signup.html" class="btn btn-sm btn-primary header-signup-btn">Sign Up</a>
+
+        <!-- Mobile Hamburger Toggler -->
+        <button class="navbar-toggler d-lg-none" type="button" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-3"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="navbar-collapse d-lg-none" id="arenaNavbarNav">
+      <button class="mobile-close-btn" aria-label="Close Navigation Drawer"><i class="bi bi-x-lg"></i></button>
+      <div class="d-flex align-items-center gap-2 mb-4">
+        <div class="brand-icon"><i class="bi bi-shield-shaded"></i></div>
+        <span class="brand-text">ARENA</span>
+      </div>
+      <a href="index.html" class="arena-nav-link">Home</a>
+      <a href="events.html" class="arena-nav-link">Sports</a>
+      <a href="venue-details.html" class="arena-nav-link">Venues</a>
+      <a href="ticket-details.html" class="arena-nav-link">Ticket Lookup</a>
+      <a href="contact.html" class="arena-nav-link active">Contact</a>
+
+      <!-- Mobile Action Button (Sign Up retained) -->
+      <div class="navbar-actions-mobile mt-3">
+        <a href="signup.html" class="btn btn-primary w-100">Sign Up</a>
       </div>
     </div>
   </header>
@@ -51,7 +78,7 @@
   <section class="py-5 bg-surface-1 border-bottom border-subtle">
     <div class="container-custom text-center">
       <span class="section-subtitle">Fan Care & Matchday Services</span>
-      <h1 class="display-5 fw-bold mb-2">HOW CAN WE ASSIST YOU?</h1>
+      <h1 class="display-5 fw-bold mb-2">CONTACT & MATCHDAY SUPPORT DESK</h1>
       <p class="text-secondary max-w-600 mx-auto" style="max-width: 620px;">
         Everything you need to know about purchasing tickets, stadium access, digital mobile passes, and matchday guidelines.
       </p>
@@ -236,41 +263,322 @@
     </div>
   </section>
 
+  <!-- =========================================================================
+       STADIUM HEADQUARTERS & INTERACTIVE MAP
+       ========================================================================= -->
+  <section class="py-5 bg-surface-0 border-top border-bottom border-subtle">
+    <div class="container-custom">
+      <div class="section-header text-center mb-5">
+        <span class="section-subtitle">Stadium Headquarters & Concierge</span>
+        <h2>Visit Us & Stadium Location</h2>
+        <p class="text-secondary max-w-600 mx-auto" style="max-width: 620px;">
+          ARENA Global Ticketing HQ & Matchday Fan Box Office are situated directly adjacent to iconic Wembley Stadium in London.
+        </p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Interactive Map Embed -->
+        <div class="col-lg-7">
+          <div class="p-2 bg-surface-1 border border-subtle rounded-3 h-100 shadow-sm overflow-hidden d-flex flex-column">
+            <div class="ratio ratio-16x9 flex-grow-1" style="min-height: 380px; border-radius: var(--radius-sm); overflow: hidden;">
+              <iframe 
+                src="https://maps.google.com/maps?q=Wembley%20Stadium,%20London,%20UK&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                style="border: 0; width: 100%; height: 100%; filter: invert(90%) hue-rotate(180deg) contrast(1.1);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="ARENA Stadium Headquarters Map">
+              </iframe>
+            </div>
+            <div class="p-3 bg-surface-2 rounded-2 mt-2 d-flex align-items-center justify-content-between flex-wrap gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-geo-alt-fill text-danger fs-5"></i>
+                <span class="small text-light"><strong>Wembley Stadium, London HA9 0WS</strong>, United Kingdom</span>
+              </div>
+              <a href="https://maps.google.com/?q=Wembley+Stadium+London" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-arena">
+                <i class="bi bi-box-arrow-up-right"></i> Open in Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Headquarters Details & Transit -->
+        <div class="col-lg-5">
+          <div class="p-4 bg-surface-1 border border-subtle rounded-3 h-100 d-flex flex-column justify-content-between">
+            <div>
+              <h4 class="font-heading mb-3"><i class="bi bi-building-check text-primary"></i> Box Office & Turnstiles</h4>
+              
+              <div class="d-flex flex-column gap-3 mb-4">
+                <div class="d-flex gap-3">
+                  <div class="feature-icon-wrap flex-shrink-0" style="width: 44px; height: 44px; font-size: 1.25rem;">
+                    <i class="bi bi-clock-history text-primary"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-1 text-white">Opening Hours</h6>
+                    <p class="text-secondary small mb-0">Monday – Sunday: 08:00 – 22:00 BST<br><span class="text-success fw-bold">Live Matchdays:</span> Open until 45 mins post-whistle</p>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3">
+                  <div class="feature-icon-wrap flex-shrink-0" style="width: 44px; height: 44px; font-size: 1.25rem;">
+                    <i class="bi bi-train-front text-info"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-1 text-white">Public Transit & Subway</h6>
+                    <p class="text-secondary small mb-0">Wembley Park (Jubilee & Metropolitan lines &bull; 5 min walk)<br>Wembley Stadium Station (Chiltern Railways &bull; 3 min walk)</p>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3">
+                  <div class="feature-icon-wrap flex-shrink-0" style="width: 44px; height: 44px; font-size: 1.25rem;">
+                    <i class="bi bi-universal-access text-warning"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-1 text-white">Accessible Entrance & Concierge</h6>
+                    <p class="text-secondary small mb-0">Gate D & F dedicated step-free entrance, sensory suites, and wheelchair audio commentary assistance.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-3 bg-surface-2 border border-subtle rounded-2">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <span class="small fw-bold text-uppercase text-muted">Matchday Support Hotline</span>
+                <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-50">Online</span>
+              </div>
+              <div class="d-flex align-items-center gap-2 font-heading fs-5 text-white">
+                <i class="bi bi-headset text-primary"></i> +44 20 7946 0192
+              </div>
+              <span class="text-muted small">Toll-free fan assistance available in English, Spanish & French</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SOCIAL CHANNELS & COMMUNITY HUB
+       ========================================================================= -->
+  <section class="py-5">
+    <div class="container-custom">
+      <div class="section-header text-center mb-5">
+        <span class="section-subtitle">Stay Connected Everywhere</span>
+        <h2>Official Social Channels & Community</h2>
+        <p class="text-secondary max-w-600 mx-auto" style="max-width: 620px;">
+          Follow ARENA across social platforms for flash ticket drops, VIP hospitality access, lineup announcements, and stadium matchday guides.
+        </p>
+      </div>
+
+      <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+        <!-- Twitter / X -->
+        <div class="col">
+          <div class="p-4 bg-surface-1 border border-subtle rounded-3 h-100 d-flex flex-column justify-content-between position-relative overflow-hidden">
+            <div>
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="d-inline-flex align-items-center justify-content-center bg-surface-2 border border-subtle rounded-circle" style="width: 52px; height: 52px; font-size: 1.4rem; color: #FFFFFF;">
+                  <i class="bi bi-twitter-x"></i>
+                </div>
+                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25">1.2M Followers</span>
+              </div>
+              <h5 class="font-heading mb-1 text-white">X / Twitter</h5>
+              <div class="text-muted small mb-2">@ArenaTicketsLive</div>
+              <p class="text-secondary small mb-3">
+                Live matchday turnstile updates, instant ticket drops, and real-time gate notifications during tournament fixtures.
+              </p>
+            </div>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-arena w-100">
+              <i class="bi bi-twitter-x"></i> Follow on X
+            </a>
+          </div>
+        </div>
+
+        <!-- Instagram -->
+        <div class="col">
+          <div class="p-4 bg-surface-1 border border-subtle rounded-3 h-100 d-flex flex-column justify-content-between position-relative overflow-hidden">
+            <div>
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="d-inline-flex align-items-center justify-content-center bg-surface-2 border border-subtle rounded-circle" style="width: 52px; height: 52px; font-size: 1.4rem; color: #E1306C;">
+                  <i class="bi bi-instagram"></i>
+                </div>
+                <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25">850K Followers</span>
+              </div>
+              <h5 class="font-heading mb-1 text-white">Instagram</h5>
+              <div class="text-muted small mb-2">@arenatickets</div>
+              <p class="text-secondary small mb-3">
+                Immersive stadium atmosphere reels, pitchside views, VIP hospitality reveals, and behind-the-scenes stadium tours.
+              </p>
+            </div>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-arena w-100">
+              <i class="bi bi-instagram"></i> Follow on Instagram
+            </a>
+          </div>
+        </div>
+
+        <!-- YouTube -->
+        <div class="col">
+          <div class="p-4 bg-surface-1 border border-subtle rounded-3 h-100 d-flex flex-column justify-content-between position-relative overflow-hidden">
+            <div>
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="d-inline-flex align-items-center justify-content-center bg-surface-2 border border-subtle rounded-circle" style="width: 52px; height: 52px; font-size: 1.4rem; color: #FF0000;">
+                  <i class="bi bi-youtube"></i>
+                </div>
+                <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25">420K Subscribers</span>
+              </div>
+              <h5 class="font-heading mb-1 text-white">YouTube</h5>
+              <div class="text-muted small mb-2">@ArenaSportsLive</div>
+              <p class="text-secondary small mb-3">
+                Seat view walk-throughs, stadium sound guides, championship match previews, and acoustic stadium reviews.
+              </p>
+            </div>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-arena w-100">
+              <i class="bi bi-youtube"></i> Subscribe on YouTube
+            </a>
+          </div>
+        </div>
+
+        <!-- Discord -->
+        <div class="col">
+          <div class="p-4 bg-surface-1 border border-subtle rounded-3 h-100 d-flex flex-column justify-content-between position-relative overflow-hidden">
+            <div>
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="d-inline-flex align-items-center justify-content-center bg-surface-2 border border-subtle rounded-circle" style="width: 52px; height: 52px; font-size: 1.4rem; color: #5865F2;">
+                  <i class="bi bi-discord"></i>
+                </div>
+                <span class="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25">55K Fans Online</span>
+              </div>
+              <h5 class="font-heading mb-1 text-white">Discord Community</h5>
+              <div class="text-muted small mb-2">discord.gg/arenasports</div>
+              <p class="text-secondary small mb-3">
+                Matchday fan lounges, fan-to-fan travel tips, ticket swap verification assistance, and live match discussions.
+              </p>
+            </div>
+            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-arena w-100">
+              <i class="bi bi-discord"></i> Join Discord Lounge
+            </a>
+          </div>
+        </div>
+
+        <!-- WhatsApp Broadcast -->
+        <div class="col">
+          <div class="p-4 bg-surface-1 border border-subtle rounded-3 h-100 d-flex flex-column justify-content-between position-relative overflow-hidden">
+            <div>
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="d-inline-flex align-items-center justify-content-center bg-surface-2 border border-subtle rounded-circle" style="width: 52px; height: 52px; font-size: 1.4rem; color: #25D366;">
+                  <i class="bi bi-whatsapp"></i>
+                </div>
+                <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-25">Instant Alerts</span>
+              </div>
+              <h5 class="font-heading mb-1 text-white">WhatsApp Channel</h5>
+              <div class="text-muted small mb-2">ARENA Matchday Alerts</div>
+              <p class="text-secondary small mb-3">
+                Direct phone broadcasts when restricted tier seats release, gates open, or severe weather impacts kick-off.
+              </p>
+            </div>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-arena w-100">
+              <i class="bi bi-whatsapp"></i> Join WhatsApp Channel
+            </a>
+          </div>
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="col">
+          <div class="p-4 bg-surface-1 border border-subtle rounded-3 h-100 d-flex flex-column justify-content-between position-relative overflow-hidden">
+            <div>
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="d-inline-flex align-items-center justify-content-center bg-surface-2 border border-subtle rounded-circle" style="width: 52px; height: 52px; font-size: 1.4rem; color: #0A66C2;">
+                  <i class="bi bi-linkedin"></i>
+                </div>
+                <span class="badge bg-info bg-opacity-10 text-info border border-info border-opacity-25">Corporate & Careers</span>
+              </div>
+              <h5 class="font-heading mb-1 text-white">LinkedIn</h5>
+              <div class="text-muted small mb-2">ARENA Sports Ticketing Corp</div>
+              <p class="text-secondary small mb-3">
+                Executive box partnerships, stadium venue integration, sports tech announcements, and global engineering careers.
+              </p>
+            </div>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-arena w-100">
+              <i class="bi bi-linkedin"></i> Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="arena-footer">
     <div class="container-custom">
       <div class="row g-4">
+        <!-- Brand Info -->
         <div class="col-lg-4">
           <a href="index.html" class="navbar-brand-arena mb-3">
-            <div class="brand-icon"><i class="bi bi-shield-shaded"></i></div>
+            <div class="brand-icon">
+              <i class="bi bi-shield-shaded"></i>
+            </div>
             <div>
               <span class="brand-text">ARENA</span>
               <span class="brand-tag">FEEL THE GAME</span>
             </div>
           </a>
-          <p class="text-secondary small">ARENA is the premier international sports ticketing platform.</p>
+          <p class="text-secondary small pe-lg-4">
+            ARENA is the premier international sports ticketing platform. Secure, transparent, and direct stadium ticketing for football, cricket, basketball, tennis, and global championships.
+          </p>
+          <div class="d-flex gap-3 text-muted fs-5">
+            <a href="#" class="text-secondary" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-secondary" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-secondary" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-secondary" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
         </div>
+
+        <!-- Sports Links -->
         <div class="col-6 col-lg-2">
           <h5 class="footer-heading">Sports</h5>
           <ul class="footer-links">
             <li><a href="events.html?sport=Football">Football</a></li>
             <li><a href="events.html?sport=Cricket">Cricket</a></li>
+            <li><a href="events.html?sport=Basketball">Basketball</a></li>
+            <li><a href="events.html?sport=Tennis">Tennis</a></li>
+            <li><a href="events.html?sport=Rugby">Rugby</a></li>
+            <li><a href="events.html?sport=Formula+Racing">Formula Racing</a></li>
           </ul>
         </div>
+
+        <!-- Quick Links -->
         <div class="col-6 col-lg-2">
           <h5 class="footer-heading">Quick Links</h5>
           <ul class="footer-links">
-            <li><a href="events.html">Fixtures</a></li>
+            <li><a href="events.html">All Fixtures</a></li>
+            <li><a href="venue-details.html">Stadiums & Maps</a></li>
             <li><a href="ticket-details.html">Booking Lookup</a></li>
+            <li><a href="contact.html">Contact & Support</a></li>
+            <li><a href="coming-soon.html">Coming Soon</a></li>
+            <li><a href="signup.html">Create Account</a></li>
           </ul>
         </div>
+
+        <!-- Newsletter & Guarantee -->
         <div class="col-lg-4">
-          <h5 class="footer-heading">Turnstile Entry</h5>
-          <p class="text-secondary small">Turnstile issues or re-entry queries? Visit the Matchday Ticket Office adjacent to Gate B.</p>
+          <h5 class="footer-heading">Match Alerts</h5>
+          <p class="text-secondary small">Get instant priority drop alerts when tickets for finals and derbies go on sale.</p>
+          <form class="d-flex gap-2" onsubmit="event.preventDefault(); window.ArenaToast ? window.ArenaToast.show('Subscribed to match alerts!', 'success') : alert('Subscribed');">
+            <input type="email" class="arena-input" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary text-nowrap">Join</button>
+          </form>
+          <div class="d-flex align-items-center gap-2 mt-3 text-muted small">
+            <i class="bi bi-shield-lock-fill text-success"></i> 256-bit SSL Encrypted Ticketing
+          </div>
         </div>
       </div>
+
       <div class="footer-bottom">
         <div>&copy; 2026 ARENA Ticketing Technologies Inc. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="contact.html">Terms of Service</a>
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Matchday Regulations</a>
+        </div>
       </div>
     </div>
   </footer>
